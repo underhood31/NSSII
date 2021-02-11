@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#-----Dropping requests from VM2
+sudo iptables -A OUTPUT -s 10.0.1.2/24 -j DROP
+
+#-------------
+
+sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -p tcp --syn --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+sudo iptables -t nat -A PREROUTING -i enp0s8 -p tcp --dport 80 -j DNAT --to-destination 10.0.1.1
+sudo iptables -t nat -A POSTROUTING -o enp0s9 -p tcp --dport 80 -d 10.0.1.1 -j SNAT --to-source 10.0.1.2
+
+sudo iptables -t nat -A PREROUTING -i enp0s9 -p tcp  -j DNAT --to-destination 10.0.0.1
+sudo iptables -t nat -A POSTROUTING -o enp0s8 -p tcp  -d 10.0.0.1 -j SNAT --to-source 10.0.0.2
+
+sudo iptables -A FORWARD -o enp0s8 -i enp0s9 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+#--------------
+
+sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -p tcp --syn --dport 443 -m conntrack --ctstate NEW -j ACCEPT
+sudo iptables -A FORWARD -i enp0s8 -o enp0s9 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+sudo iptables -t nat -A PREROUTING -i enp0s8 -p tcp --dport 443 -j DNAT --to-destination 10.0.1.1
+sudo iptables -t nat -A POSTROUTING -o enp0s9 -p tcp --dport 443 -d 10.0.1.1 -j SNAT --to-source 10.0.1.2
+
+sudo iptables -t nat -A PREROUTING -i enp0s9 -p tcp  -j DNAT --to-destination 10.0.0.1
+sudo iptables -t nat -A POSTROUTING -o enp0s8 -p tcp  -d 10.0.0.1 -j SNAT --to-source 10.0.0.2
+
+sudo iptables -A FORWARD -o enp0s8 -i enp0s9 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+#-------------
+
+
+sudo iptables -P FORWARD DROP
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+ip link set dev enp0s17 up
+dhcpcd enp0s17 
