@@ -35,6 +35,9 @@ static struct nf_hook_ops *my_nf_hook = NULL;
 static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_hook_state *state) {
 	struct iphdr *iph;
 	struct tcphdr *tcph;
+	unsigned char *ptr = NULL;
+	unsigned int option_size = 0;
+
 	if (!skb)
 		return NF_ACCEPT;
 
@@ -44,7 +47,13 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 
 		if (!tcph->syn && !tcph->rst && !tcph->psh && !tcph->ack && !tcph->urg && !tcph->ece && !tcph->cwr && !tcph->fin)
 		{
+			printk(KERN_INFO "TCP null scan packet detected\n");
 			return NF_DROP;
+		}
+		else if (tcph->syn){
+			ptr = (unsigned char*)tcph + sizeof(struct tcphdr);
+			option_size = (unsigned int)*(ptr + 1);
+			printk(KERN_INFO "option_size: %d\n",option_size);
 		}
 
 	}
