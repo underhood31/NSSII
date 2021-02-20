@@ -57,7 +57,7 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 			printk(KERN_INFO "tcph_len: %d\n",tcph_len);
 			end=(unsigned char*)tcph + tcph_len;
 			ptr = (unsigned char*)tcph + sizeof(struct tcphdr);
-			printk(KERN_INFO "size_left: %d",(unsigned int)(end-ptr) );
+			printk(KERN_INFO "size_left: %d\n",(unsigned int)(end-ptr) );
 
 			// option_size = (unsigned int)*(ptr);
 			// printk(KERN_INFO "option_size: %d\n",*(unsigned int*)(ptr-4));
