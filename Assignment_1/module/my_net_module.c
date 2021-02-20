@@ -11,26 +11,46 @@ MODULE_DESCRIPTION("A netfilter hook module.");
 MODULE_VERSION("1.0");
 
 static struct nf_hook_ops *my_nf_hook = NULL;
+// static unsigned int hfunc(void *priv, struct sk_buff *skb, const struct nf_hook_state *state) {
+// 	struct iphdr *iph;
+// 	struct udphdr *udph;
+// 	if (!skb)
+// 		return NF_ACCEPT;
 
+// 	iph = ip_hdr(skb);
+// 	if (iph->protocol == IPPROTO_UDP) {
+// 		udph = udp_hdr(skb);
+// 		if (ntohs(udph->dest) == 53) {
+// 			return NF_ACCEPT;
+// 		}
+// 	}
+// 	else if (iph->protocol == IPPROTO_TCP) {
+// 		return NF_ACCEPT;
+// 	}
+	
+// 	return NF_DROP;
+// }
 
 static unsigned int hfunc(void *priv, struct sk_buff *skb, const struct nf_hook_state *state) {
-	// struct iphdr *iph;
-	// struct udphdr *udph;
-	// if (!skb)
-	// 	return NF_ACCEPT;
+	struct iphdr *iph;
+	struct udphdr *udph;
+	if (!skb)
+		return NF_ACCEPT;
 
-	// iph = ip_hdr(skb);
-	// if (iph->protocol == IPPROTO_UDP) {
-	// 	udph = udp_hdr(skb);
-	// 	if (ntohs(udph->dest) == 53) {
-	// 		return NF_ACCEPT;
-	// 	}
-	// }
-	// else if (iph->protocol == IPPROTO_TCP) {
-	// 	return NF_ACCEPT;
-	// }
+	iph = ip_hdr(skb);
+	if (iph->protocol == IPPROTO_TCP) {
+		/*
+		if packet SYN flag is enabled and state=NEW:
+			return NF_ACCEPT
+		else if SYN flag is disabled and state=NEW
+			return NF_DROP
+
+		*/		
+
+	}
+
 	
-	return NF_DROP;
+	return NF_ACCEPT
 }
 
 static int __init my_net_module_init(void) {
