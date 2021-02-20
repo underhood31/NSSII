@@ -36,8 +36,8 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 	struct iphdr *iph;
 	struct tcphdr *tcph;
 	unsigned char *ptr = NULL;
-	unsigned int option_size = 0;
-
+	unsigned char* end = NULL;
+	unsigned int tcph_len;
 	if (!skb)
 		return NF_ACCEPT;
 
@@ -51,9 +51,16 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 			return NF_DROP;
 		}
 		else if (tcph->syn){
+
+			tcph_len = (unsigned int)(tcph->doff);
+
+			printk(KERN_INFO "tcph_len: %d\n",tcph_len);
+			end=(unsigned char*)tcph + tcph_len;
 			ptr = (unsigned char*)tcph + sizeof(struct tcphdr);
-			option_size = (unsigned int)*(ptr);
-			printk(KERN_INFO "option_size: %d\n",*(unsigned int*)(ptr-4));
+			printk(KERN_INFO "size_left: %d",(unsigned int)(end-ptr) );
+
+			// option_size = (unsigned int)*(ptr);
+			// printk(KERN_INFO "option_size: %d\n",*(unsigned int*)(ptr-4));
 		}
 
 	}
