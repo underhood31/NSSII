@@ -52,7 +52,7 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 		}
 		else if (tcph->syn){
 			ptr = (unsigned char*)tcph + sizeof(struct tcphdr);
-			option_size = (unsigned int)*(ptr + 1);
+			option_size = (unsigned int)*(ptr);
 			printk(KERN_INFO "option_size: %d\n",option_size);
 		}
 
