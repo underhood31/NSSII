@@ -35,9 +35,7 @@ static struct nf_hook_ops *my_nf_hook = NULL;
 static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_hook_state *state) {
 	struct iphdr *iph;
 	struct tcphdr *tcph;
-	unsigned char *ptr = NULL;
-	unsigned char* end = NULL;
-	unsigned int tcph_len;
+	unsigned int option_length;
 	if (!skb)
 		return NF_ACCEPT;
 
@@ -52,12 +50,8 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 		}
 		else if (tcph->syn){
 
-			tcph_len = (unsigned int)(tcph->doff);
-
-			printk(KERN_INFO "tcph_len: %d\n",tcph_len);
-			end=(unsigned char*)tcph + tcph_len;
-			ptr = (unsigned char*)tcph + sizeof(struct tcphdr);
-			printk(KERN_INFO "size_left: %d\n",(unsigned int)(end-ptr) );
+			option_length=tcp_optlen(skb);
+			printk(KERN_INFO "option_length: %d\n",option_length);
 
 			// option_size = (unsigned int)*(ptr);
 			// printk(KERN_INFO "option_size: %d\n",*(unsigned int*)(ptr-4));
