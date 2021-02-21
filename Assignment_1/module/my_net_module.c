@@ -68,7 +68,7 @@ static unsigned int hook_conntrack (void *priv, struct sk_buff *skb, const struc
 	struct iphdr *iph;
 	struct tcphdr *tcph;
 	struct nf_conn *ct;
-	unsigned int conn_info;
+	enum ip_conntrack_info conn_info;
 
 	iph=ip_hdr(skb);
 	if (iph->protocol == IPPROTO_TCP) {
