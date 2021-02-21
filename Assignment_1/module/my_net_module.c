@@ -49,17 +49,21 @@ static unsigned int hook_pre_route(void *priv, struct sk_buff *skb, const struct
 			printk(KERN_INFO "TCP null scan packet detected\n");
 			return NF_DROP;
 		}
+		else if(!tcph->syn && !tcph->rst && tcph->psh && !tcph->ack && tcph->urg && !tcph->ece && !tcph->cwr && tcph->fin){
+			printk(KERN_INFO "Xmas scan detected\n");
+
+		}
 		else if (tcph->syn) {
 
-			option_length=tcp_optlen(skb);
-			if(option_length==4) {
-				printk(KERN_INFO "nmap half open TCP SYN packet found");
-				return NF_DROP;
-			}
+			// option_length=tcp_optlen(skb);
+			// if(option_length==4) {
+			// 	printk(KERN_INFO "nmap half open TCP SYN packet found");
+			// 	return NF_DROP;
+			// }
 		}
 		else if (tcph->ack) {
-			option_length=tcp_optlen(skb);
-			printk(KERN_INFO "option_length: %d\n", option_length);
+			// option_length=tcp_optlen(skb);
+			// printk(KERN_INFO "option_length: %d\n", option_length);
 
 		}
 
