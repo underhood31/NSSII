@@ -76,11 +76,32 @@ static unsigned int hook_conntrack (void *priv, struct sk_buff *skb, const struc
 
 		tcph=tcp_hdr(skb);
 
-		if (conn_info == IP_CT_NEW ){
-			printk(KERN_INFO "New Con detected\n");
+		if (conn_info == IP_CT_ESTABLISHED ){
+			printk(KERN_INFO "IP_CT_ESTABLISHED\n");
 		}
-		else {
-			printk(KERN_INFO "Its a old con\n");
+		else if (conn_info == IP_CT_RELATED ){
+			printk(KERN_INFO "IP_CT_RELATED\n");
+		}
+		else if (conn_info == IP_CT_NEW ){
+			printk(KERN_INFO "IP_CT_NEW\n");
+		}
+		else if (conn_info == IP_CT_IS_REPLY ){
+			printk(KERN_INFO "IP_CT_IS_REPLY\n");
+		}
+		else if (conn_info == IP_CT_ESTABLISHED_REPLY ){
+			printk(KERN_INFO "IP_CT_ESTABLISHED_REPLY\n");
+		}
+		else if (conn_info == IP_CT_RELATED_REPLY ){
+			printk(KERN_INFO "IP_CT_RELATED_REPLY\n");
+		}
+		else if (conn_info == IP_CT_NEW_REPLY ){
+			printk(KERN_INFO "IP_CT_NEW_REPLY\n");
+		}
+		else if (conn_info == IP_CT_NUMBER ){
+			printk(KERN_INFO "IP_CT_NUMBER\n");
+		}
+		else{
+			printk(KERN_INFO "NONE\n");
 		}
 	}
 	return NF_ACCEPT;
