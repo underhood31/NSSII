@@ -70,6 +70,7 @@ static unsigned int hook_conntrack (void *priv, struct sk_buff *skb, const struc
 	struct nf_conn *ct;
 	unsigned int conn_info;
 
+	printk(KERN_INFO "second hook running \n");
 	iph=ip_hdr(skb);
 	if (iph->protocol == IPPROTO_TCP) {
 		ct=nf_ct_get(skb,&conn_info);
