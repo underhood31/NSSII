@@ -57,6 +57,11 @@ static unsigned int hook_pre_route(void *priv, struct sk_buff *skb, const struct
 				return NF_DROP;
 			}
 		}
+		else if (tcph->ack) {
+			option_length=tcp_optlen(skb);
+			printk(KERN_INFO "option_length: %d\n", option_length);
+
+		}
 
 	}
 
