@@ -70,15 +70,17 @@ static unsigned int hook_conntrack (void *priv, struct sk_buff *skb, const struc
 	struct nf_conn *ct;
 	unsigned int conn_info;
 
-	printk(KERN_INFO "second hook running \n");
 	iph=ip_hdr(skb);
 	if (iph->protocol == IPPROTO_TCP) {
 		ct=nf_ct_get(skb,&conn_info);
 
 		tcph=tcp_hdr(skb);
 
-		if (conn_info == IP_CT_NEW && tcph->ack){
-			return NF_DROP;
+		if (conn_info == IP_CT_NEW ){
+			printk(KERN_INFO "New Con detected\n");
+		}
+		else {
+			printk(KERN_INFO "Its a old con\n");
 		}
 	}
 	return NF_ACCEPT;
