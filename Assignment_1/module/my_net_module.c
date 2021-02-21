@@ -43,15 +43,17 @@ static unsigned int hook_sNull(void *priv, struct sk_buff *skb, const struct nf_
 	if (iph->protocol == IPPROTO_TCP) {
 		tcph=tcp_hdr(skb);
 
-		if (!tcph->syn && !tcph->rst && !tcph->psh && !tcph->ack && !tcph->urg && !tcph->ece && !tcph->cwr && !tcph->fin)
-		{
+		if (!tcph->syn && !tcph->rst && !tcph->psh && !tcph->ack && !tcph->urg && !tcph->ece && !tcph->cwr && !tcph->fin) {
 			printk(KERN_INFO "TCP null scan packet detected\n");
 			return NF_DROP;
 		}
-		else if (tcph->syn){
+		else if (tcph->syn) {
 
 			option_length=tcp_optlen(skb);
-			printk(KERN_INFO "option_length: %d\n",option_length);
+			if(option_length==4) {
+				printk(KERN_INFO "nmap half open TCP SYN packet found");
+				return NF_DROP;
+			}
 
 			// option_size = (unsigned int)*(ptr);
 			// printk(KERN_INFO "option_size: %d\n",*(unsigned int*)(ptr-4));
