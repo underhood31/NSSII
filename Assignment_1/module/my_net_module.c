@@ -94,9 +94,6 @@ static unsigned int hook_conntrack (void *priv, struct sk_buff *skb, const struc
 		else if (conn_info == IP_CT_RELATED_REPLY ){
 			printk(KERN_INFO "IP_CT_RELATED_REPLY\n");
 		}
-		else if (conn_info == IP_CT_NEW_REPLY ){
-			printk(KERN_INFO "IP_CT_NEW_REPLY\n");
-		}
 		else if (conn_info == IP_CT_NUMBER ){
 			printk(KERN_INFO "IP_CT_NUMBER\n");
 		}
