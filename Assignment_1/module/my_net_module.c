@@ -26,16 +26,16 @@ static unsigned int hook_pre_route(void *priv, struct sk_buff *skb, const struct
 
 		if (!tcph->syn && !tcph->rst && !tcph->psh && !tcph->ack && !tcph->urg && !tcph->ece && !tcph->cwr && !tcph->fin) {
 			printk(KERN_INFO "TCP null scan packet detected\n");
-			return NF_DROP;
+			// return NF_DROP;
 		}
 		else if(!tcph->syn && !tcph->rst && tcph->psh && !tcph->ack && tcph->urg && !tcph->ece && !tcph->cwr && tcph->fin){
 			printk(KERN_INFO "Xmas scan detected\n");
-			return NF_DROP;
+			// return NF_DROP;
 
 		}
 		else if(!tcph->syn && !tcph->rst && !tcph->psh && !tcph->ack && !tcph->urg && !tcph->ece && !tcph->cwr && tcph->fin){
 			printk(KERN_INFO "Fin scan detected\n");
-			return NF_DROP;
+			// return NF_DROP;
 		}
 
 	}
