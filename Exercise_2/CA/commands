@@ -1,0 +1,4 @@
+echo user > mypass
+openssl enc -aes256 -pbkdf2 -salt -in mypass -out mypass.enc
+openssl genrsa -des3 -passout file:mypass.enc -out ca.key 4096
+openssl req -new -x509 -days 365 -key ca.key -out ca.cert.pem -passin file:mypass.enc
