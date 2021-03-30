@@ -1,0 +1,3 @@
+sudo ipsec initnss
+sudo ipsec import certVM2.p12
+sudo ipsec setup start

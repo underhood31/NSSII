@@ -1,0 +1,1 @@
+cmd_/home/user/git/NSSII/Assignment_1/module/my_net_module.mod := { echo  /home/user/git/NSSII/Assignment_1/module/my_net_module.o;  echo; } > /home/user/git/NSSII/Assignment_1/module/my_net_module.mod

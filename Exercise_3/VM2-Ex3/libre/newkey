@@ -1,0 +1,2 @@
+Generated RSA key pair with CKAID 26c504f548b2aa6082ba8e41bb4b4d418ad1963f was stored in the NSS database
+The public key can be displayed using: ipsec showhostkey --left --ckaid 26c504f548b2aa6082ba8e41bb4b4d418ad1963f
