@@ -10,9 +10,9 @@ SafeLogging 0
 DirServer VM2_Auth orport=9001 v3ident=E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2:9031 5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F
 TestingTorNetwork 1
 
-DataDirectory VM3
-Address 10.0.0.3
+DataDirectory VM4
+Address 10.0.0.4
 SocksPort 0
 ControlPort 0
 ORPort 443
-Nickname VM3
+Nickname VM4

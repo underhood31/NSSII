@@ -38,16 +38,13 @@ if __name__ == '__main__':
 				for _r in range(length):
 					_s=input("relay "+str(_r+1)+":")
 					stream.append(_s)
-				stream.append(EXIT_FINGERPRINT)
 
 				print("::Creating circuit")
 
 				circuit_id = controller.new_circuit(stream, await_build = True)
 
 				input("press enter to exit...")
-				print("::Deleting temp fingerprint file")
-				os.remove(FILEPATH)
-
+				
 				ch=input("Do you want to kill tor? (y/n)")
 				if(ch=='y' or ch=='Y'):
 					print("::Killing tor")
