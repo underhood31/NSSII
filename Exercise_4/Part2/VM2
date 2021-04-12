@@ -1,0 +1,36 @@
+# New from github
+ShutdownWaitLength 2
+ExitRelay 1
+IPv6Exit 1
+#ExitPolicy accept *:*
+CookieAuthentication 1
+ContactInfo pastly@torproject.org
+LogTimeGranularity 1
+SafeLogging 0
+
+
+Nickname VM2
+ORPort 443
+ExitRelay 0
+SocksPort 0
+ControlSocket 0
+ExitPolicy reject *:*
+
+
+DirServer VM2_Auth orport=9001 v3ident=E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2:9031 5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F
+TestingTorNetwork 1
+
+ControlPort 0
+#ControlSocket /home/user/NSSII/Exercise_4/Part2/control_socket
+DataDirectory VM2_Auth
+Address 10.0.0.2
+DirPort 10.0.0.2:9031
+
+AuthoritativeDirectory 1
+V3AuthoritativeDirectory 1
+
+
+
+#ExitPolicyRejectPrivate 1
+#CookieAuthentication 1
+ContactInfo abc@xyz.com

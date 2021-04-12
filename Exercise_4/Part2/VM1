@@ -1,0 +1,8 @@
+ShutdownWaitLength 2
+ExitRelay 1
+IPv6Exit 1
+ExitPolicy accept *:*
+CookieAuthentication 1
+ContactInfo pastly@torproject.org
+LogTimeGranularity 1
+SafeLogging 0
