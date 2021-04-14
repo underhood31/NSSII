@@ -11,5 +11,6 @@ def print_bootstrap_lines(line):
     print(term.format(line, term.Color.BLUE))
 
 # tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines)
-tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines, torrc_path="VM1")
+print("hell")
+tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines, torrc_path="./VM2")
 tor_p.kill()
