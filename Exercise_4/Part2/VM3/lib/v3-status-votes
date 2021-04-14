@@ -1,0 +1,187 @@
+network-status-version 3
+vote-status vote
+consensus-methods 28 29 30
+published 2021-04-14 18:29:33
+valid-after 2021-04-14 18:30:00
+fresh-until 2021-04-14 18:35:00
+valid-until 2021-04-14 18:45:00
+voting-delay 20 20
+recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 Microdesc=2 Relay=2
+required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
+known-flags Authority Exit Fast Guard HSDir Running Stable StaleDesc V2Dir Valid
+flag-thresholds stable-uptime=373 stable-mtbf=0 fast-speed=0 guard-wfu=0.000% guard-tk=0 guard-bw-inc-exits=0 guard-bw-exc-exits=0 enough-mtbf=0 ignoring-advertised-bws=0
+params 
+dir-source VM3 7E96051880347AC992A29003414D523F2EF72D84 10.0.0.3 10.0.0.3 9033 5000
+contact abcd@xyz.com
+shared-rand-participate
+shared-rand-commit 1 sha3-256 7E96051880347AC992A29003414D523F2EF72D84 AAAAAGB3M3y3H0byJasxGSyt8EdtMsIg9TXb/OaJY3Q/S8Q1XQyZIg==
+shared-rand-commit 1 sha3-256 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 AAAAAGB3LaCa7R9tXA/9lFvTzAuwKOrkT3Z588w6gcV+qUfLwDB0BQ==
+dir-key-certificate-version 3
+fingerprint 7E96051880347AC992A29003414D523F2EF72D84
+dir-key-published 2021-04-14 18:06:18
+dir-key-expires 2022-04-14 18:06:18
+dir-identity-key
+-----BEGIN RSA PUBLIC KEY-----
+MIIBigKCAYEA5KUQ7JpivTZHi+suLCYDJH7VpAbHbvuNE0OwU7mnzFW16jaI/IlX
+bofCem5CWpCeX5qQoEJMSMlmXc/Y6Y+Yj1O0x04mfPv083bcYeyvRkjES5NYT8LY
+WeOODgKNABjX9CjZssRQGAcpFcQrC7nYg7pOo1MkJEvyfIX94MQmCoTFC1x18BtK
+pp52Qvgm6qP+fkUZmkkY0fRcmECsm+GuSnp7Wb6OBH7KMF8CXmlEAw5AT3Sw1uiP
+1uE4rzZ44YdKJUUO9CMo8Awvj7ZhmhXRMy9AHii7MWSXDnOu8s1sZGI4EmU6YW6y
+7sw7eFZQFgWyBwMhxY+9oFklTAA6UDOVCfQ35Sirjs3QcRt46CyQdPnKxk1ZwNkX
+dUCp0bBgP0yrsu28sHtZZmivSmLd+cs3VOZCd61LwbUliuvpOOjhkSWYzhN34p8u
+AiTg+sm82ripkypvBr3o+dgqtzfw/l6Q2tmZ58siJ+wRw6bYDKxJjMBBmof0JEl7
+v/vseHHMuraVAgMBAAE=
+-----END RSA PUBLIC KEY-----
+dir-signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEAuAYy36iAnvNJqatO9jYdAmbGHql7deZyVQEqlSiwWnDibI98yKc7
+sxOFCVjRoCOSq6pzMenzuwTnDdVO1nYBFPL0c/hYit/j7oPqHdSCi0e0rFMrbuMF
+PzF5I/jwTlzU5EQVjq+Po2Sjpgi3aWel2qG1JugbR7tWauZVl5vksoHiSqaErody
+GEZt117IfBeJ3a287rONfMxmL9SnSMmwxGDqAMgyII+W60TJQsvOIV5XUQiRo97K
+XQvlRVNTgJ72STUPnvgOPzBA0himnra9uJQjuyAUQowUfP9bN0rZui6wCBFbcjR/
+O0+qgrDEuyUmpongqeHiaOlu+5BOvxgifQIDAQAB
+-----END RSA PUBLIC KEY-----
+dir-key-crosscert
+-----BEGIN ID SIGNATURE-----
+ri1qHIN4OLTeGNGFHXdgDWbjr5GW1G6hqW+d5zlkB8AqY3Try7rSe1p3zLASwVFo
+MN41u1rwKh8lVnN9+7F1fuKesmSyWJbDclx4DXFFQvkMcc8oihSMsJMEz3+fKguG
+yeeY4zB7/oHREYpcIj1BixqyAZLpIBJMgqp2KIHsbA+HMHZFSwBRpuieaPRqOYM/
+aUxrG98jEfSvkyVDin5aG85LKPiRBFYNG397Nq9TQ/+VNYlGLL1peJSTtO4euJBa
+q1dSz46lk2aPv6O5wS0HM8PtXn0wS3edGnw/Z0xWg/1//LK5W88YG4GLNX/dc+xk
+RgCBuelZmrvO7mO6yxUf9A==
+-----END ID SIGNATURE-----
+dir-key-certification
+-----BEGIN SIGNATURE-----
+RDdeupMJy1vGMSp9PRjwnj8SezNUQEx3ZvRw/zhyYke9vVUVXAtI+CTILSgLvun1
+WC3o9WkM1/cLBbcoRIDfoecmB3y7P9XLlmkVllnVA8pGguMxPVCGIAp0Es1cFMaH
+FSnRuJ7FfMMm/UxoCpfQKsmAMBBSJnUtRCWfW4Siy6BZ+jiD8vZ2NBe24EzZ/ulV
+GrwlfCza1KzGY26AkDuplktlFpY85b46t3b7QHzFyTNL2Hu6zz/T/3jWHTQmCR3y
+8U7QT6uNG9p6W7cSEPG0iIEXLIulW+r155D0HBJFWFzjudkNGbU0Z9QB0oBgklYV
+BpMCPFqBqjc2p9uvQoz9Eth3aEOUYAAZWQCpC3V8MlN7bOc6+8+t7A3SO1BA3BpC
+YixAsm3RTDHxaNYkjOb9+FFLznF4L262gjB6SjB37KQ31EjaYsGkGGdSX4allwJC
+n350yKb2S/0Pb8U+ddbIFh1VVqFjLnxnpJa9UbsV3ZH6fWaH44pUtoCJQDUiI+ym
+-----END SIGNATURE-----
+r VM3 gtr/bGhmn3ubJiqlQFe/7DXywrc +qe3HKXEEQgzfU9oAku/2uFmUic 2021-04-14 18:23:20 10.0.0.3 5000 9033
+s Authority Fast Guard HSDir Running Stable V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0
+p reject 1-65535
+id ed25519 sMQ7Z8WCIA8eLN1atJB7oXi0mq2XpWqtZt3i1eMyci0
+m 28,29 sha256=m8tnUA6CM78y+dTJd1B0uWShIlbA6mIQBESGI3GHIrI
+m 30 sha256=pgiyE1/Vpz8+EiHEwPzHysh+CztRVLqUcIwuBrd3KpY
+r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo DuUtg8Drl1X8fm4oXsOVlGEPNLc 2021-04-14 18:23:22 10.0.0.2 5000 9031
+s Authority Fast V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0
+p reject 1-65535
+id ed25519 THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE
+m 28,29 sha256=toJN12n+kKQRKmG84Rtjysq/cc88IL3p4VTUffFaXvo
+m 30 sha256=+tBZkLzlB1OaA2KCsZRHtSLzjsWpPJg9XY1627e5jXY
+directory-footer
+directory-signature 7E96051880347AC992A29003414D523F2EF72D84 5ED73971B373F5D1E15396B001E4F9C396A0A565
+-----BEGIN SIGNATURE-----
+m/FlDBKpxvAI+7S6hhzHWjZusw/oPzMobvh+oJUKRMV4YkowQu63l1wb+7Ea+smk
+XMBkHO7gkvXfLnGL/i8ZyCPSTM5RliOiTWUP1Tgw9VZIOFjw097FTtNtpy5757Rq
+msV7wR2f6Ug5bQrel9vU00h7yFewJIIWzZ1nyC2o6EkcyY/d5Q/2HogRObXV1gop
+a7YeV/yDXYZavCmxO8HXOTgAsPufah1e0j29ECvqH8brZ5i7XxH4esH5Ngiy/Rsx
+w3osz+tHOtSMvxei03TVytccjn4OtCPJitC47B9UdOfLWtmRzuFqOILkLCVV+LrA
+4YxcLhcXFioz1g6Qy5marA==
+-----END SIGNATURE-----
+network-status-version 3
+vote-status vote
+consensus-methods 28 29 30
+published 2021-04-14 18:29:32
+valid-after 2021-04-14 18:30:00
+fresh-until 2021-04-14 18:35:00
+valid-until 2021-04-14 18:45:00
+voting-delay 20 20
+recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 Microdesc=2 Relay=2
+required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
+known-flags Authority Exit Fast Guard HSDir Running Stable StaleDesc V2Dir Valid
+flag-thresholds stable-uptime=370 stable-mtbf=0 fast-speed=0 guard-wfu=0.000% guard-tk=0 guard-bw-inc-exits=0 guard-bw-exc-exits=0 enough-mtbf=0 ignoring-advertised-bws=0
+params 
+dir-source VM2 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2 10.0.0.2 9031 5000
+contact abc@xyz.com
+shared-rand-participate
+shared-rand-commit 1 sha3-256 7E96051880347AC992A29003414D523F2EF72D84 AAAAAGB3M3y3H0byJasxGSyt8EdtMsIg9TXb/OaJY3Q/S8Q1XQyZIg==
+shared-rand-commit 1 sha3-256 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 AAAAAGB3LaCa7R9tXA/9lFvTzAuwKOrkT3Z588w6gcV+qUfLwDB0BQ==
+shared-rand-current-value 0 zxJao+gBmFMSezvz/VXkEWEQJD5b/z+7AXNCGoLFVW0=
+dir-key-certificate-version 3
+fingerprint E45393E0B407D3CC278E44AF08896FA2CF4A14D3
+dir-key-published 2021-04-12 14:18:02
+dir-key-expires 2022-04-12 14:18:02
+dir-identity-key
+-----BEGIN RSA PUBLIC KEY-----
+MIIBigKCAYEAtZHMdlLrYTdDKZPGAZDhT6Je0zjd+4jh3XPoOYiR0sckURDx/JcC
+ArF1hEvB3cZQ75GyoYwG96TVFLK1P1Dw0tqIUe9QembRq9MRgl8mFP0QAcPgufUG
+bwcoVqLXPt1mlRUCyleUsaGVu+oGZvq25OKjNluS9DGHzGyZEx6MAk9byhqxuL9u
+zFPEJTbVoL5rugw8MuMAVatoaiEc9pLHUEHikbuf0A+W55zZJ2WffgSrqXDtodEc
+0u/pCONjA9jFmO26+6bCIaaa41VM5rfBeOX0UKkOrEtH7Dk50dB6HxC4eq5YDdbH
+gsXqktOxVSXnYg2Ju6obuLfnIiV0tnN2rAlcdwIi20NpLyamnItvHBbzDcK0E1Qy
+T53NfnhKXBtYG3gEDQJrXixtRKaDlcj0J74c2KynF5ghZQ6jJKnJgnc5LAjGQZhf
+YxVP5YN8YDLCaOaZLncgqTIIjnMAS62L7TFe4HA5kguRuYYrxgf3nLMl3wIOmb9/
+asV1qn/MdIS3AgMBAAE=
+-----END RSA PUBLIC KEY-----
+dir-signing-key
+-----BEGIN RSA PUBLIC KEY-----
+MIIBCgKCAQEAtXfH31lt6CrXgdNepR2LYa4dqjeBO+EMocJ8of1xRHqvrwKbx9LA
+z7smabAuTNPl8OiRj2q5MT9k94jn30OqkOlPdsARukTaYpGyhxu250OUBWiRMGnm
+zPLpQnw2cKtzzjNw4cwTc4Uf09kB4nd8pHQyIYETj+0l2G42nWkcRQdUygB8NiC2
+ia7v1ppDsYjA/AioWARCUhgn/pVk5HI14bitbGu3PHe6SrzYC0VSfAcr9HuaQy38
+xVFIi2stNuZTyL7B1qVqWaN8+dhUbol2SHskcCn4QAspv2Wb0k11tXSyVlyTRKWZ
+yLj2eq+jSHs23yIaxCmWIazjp8PH+llMqQIDAQAB
+-----END RSA PUBLIC KEY-----
+dir-key-crosscert
+-----BEGIN ID SIGNATURE-----
+gPUU6ArGRA1/oSMLCD/n++sFPf9M34n2W8BY9aNPzJOpIvpP09Q/Us58nwGxiv8o
+FEzdwkqMZokwO/v+wxUkpD0AmJJRz+bfAWTBOvckJfNDWdyjJ3Th1qvlfXbw1ayu
+qN5svDKlmKeg3xbSHm+nMR+mmGAFxFamiDmZytMZLJb5yXnETmbbEVyqApJ/XMxS
+8xsUmUZ5FS6BX9Y51PZs2tAdDUaoMf9rghziuAae9YP+gRs5OHnUIYFxuJAotuAr
+vT8MzBw67WJgjYb3K1DmocvjfHZ93zPB5WDmFAtI8+X2eyVPVimGOMyuXdRcV8b0
+Y3IVTiSAMPHebQI+Mf3GKg==
+-----END ID SIGNATURE-----
+dir-key-certification
+-----BEGIN SIGNATURE-----
+DEjR64sORyklwRzUV8BLHzj4FSqOXcdlyE9jnGA/2ZzVbyWt8klt3rktb5MkKCYd
+sVH6vjH8wh8xJVhq6NGqztT6SDCWNGdRiY91GBy4Z9TJWGUsTgiYQuDSbQ6uCVbK
+zn1PHYEiZJFnQijkXunLk64iGujO2VeYzRRIFrHMtECEUJxIop2Hj8tLS3bqqjWi
+mWh1mO5vbcWEesouk0y81hFQFzKsQ+lebNUcdUFndAu/1aKioc0VPKJAToZxSMNY
+6+oH45EbQZOYmaWWHFphcnvLMixA2wtHCUiTg3MAElh3mzbLTz8tZnBBscLuEIB+
+80ahS4wexjdd9LC5UhmD+AQ533S3hxA9Z/kft9BMpPxdcy6gfgvpCAsbx302NhbV
+MR7LXDXhUdOCjp9J741xbXJmpQUjCX/6x9bvoVfdiRL2iraIq7kftEhufrtivoFQ
+70bmftfV8DRijpnaq2/lxLklKT7/bsaDmo0OmxUC2KWgq6BL1lyjyfDuyHHpIGen
+-----END SIGNATURE-----
+r VM3 gtr/bGhmn3ubJiqlQFe/7DXywrc +qe3HKXEEQgzfU9oAku/2uFmUic 2021-04-14 18:23:20 10.0.0.3 5000 9033
+s Fast Guard Stable V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0
+p reject 1-65535
+id ed25519 sMQ7Z8WCIA8eLN1atJB7oXi0mq2XpWqtZt3i1eMyci0
+m 28,29 sha256=m8tnUA6CM78y+dTJd1B0uWShIlbA6mIQBESGI3GHIrI
+m 30 sha256=pgiyE1/Vpz8+EiHEwPzHysh+CztRVLqUcIwuBrd3KpY
+r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo DuUtg8Drl1X8fm4oXsOVlGEPNLc 2021-04-14 18:23:22 10.0.0.2 5000 9031
+s Authority Fast Guard HSDir Running Stable V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0
+p reject 1-65535
+id ed25519 THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE
+m 28,29 sha256=toJN12n+kKQRKmG84Rtjysq/cc88IL3p4VTUffFaXvo
+m 30 sha256=+tBZkLzlB1OaA2KCsZRHtSLzjsWpPJg9XY1627e5jXY
+directory-footer
+directory-signature E45393E0B407D3CC278E44AF08896FA2CF4A14D3 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
+-----BEGIN SIGNATURE-----
+hdBfAq6FdbiSwk0D7anPuNGgW0j14vgGvmZ2ULXdeyqnY4zHXQNkA3qIpcmlFv6a
+0YgBRGCIU3Sw36vqX3AAOgLDE2Jgz7o5HW4FelcSGqWUCEHU0pLpcnBT98n/GAYD
+7iLw7hEA+H/8nOlLioUnBOSB1sXfzNnDL03X7mzDDb53IqYXtD7ElqFj3B5Cb5Js
+nr7IgdAsW6UwH0cjlCt3RtAR0ISL/Wj0IBR07wERzE2QsNJ7qrsc+PVB1hytQ4b0
+ojWZw357e5UHmrqFPJVaR7cZI3s7HlkWBq8kHiVgtO0cXZ8W7kfJFBLF6tnrs2pv
+vMGlKAT5VfwHrkBQL3YpGQ==
+-----END SIGNATURE-----
