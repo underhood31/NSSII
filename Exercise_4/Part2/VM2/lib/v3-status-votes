@@ -1,21 +1,22 @@
 network-status-version 3
 vote-status vote
 consensus-methods 28 29 30
-published 2021-04-14 18:01:50
-valid-after 2021-04-14 18:02:30
-fresh-until 2021-04-14 18:07:30
-valid-until 2021-04-14 18:17:30
+published 2021-04-14 18:29:32
+valid-after 2021-04-14 18:30:00
+fresh-until 2021-04-14 18:35:00
+valid-until 2021-04-14 18:45:00
 voting-delay 20 20
 recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
 recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 Microdesc=2 Relay=2
 required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
 required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
 known-flags Authority Exit Fast Guard HSDir Running Stable StaleDesc V2Dir Valid
-flag-thresholds stable-uptime=50 stable-mtbf=0 fast-speed=0 guard-wfu=0.000% guard-tk=0 guard-bw-inc-exits=0 guard-bw-exc-exits=0 enough-mtbf=0 ignoring-advertised-bws=0
+flag-thresholds stable-uptime=370 stable-mtbf=0 fast-speed=0 guard-wfu=0.000% guard-tk=0 guard-bw-inc-exits=0 guard-bw-exc-exits=0 enough-mtbf=0 ignoring-advertised-bws=0
 params 
 dir-source VM2 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2 10.0.0.2 9031 5000
 contact abc@xyz.com
 shared-rand-participate
+shared-rand-commit 1 sha3-256 7E96051880347AC992A29003414D523F2EF72D84 AAAAAGB3M3y3H0byJasxGSyt8EdtMsIg9TXb/OaJY3Q/S8Q1XQyZIg==
 shared-rand-commit 1 sha3-256 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 AAAAAGB3LaCa7R9tXA/9lFvTzAuwKOrkT3Z588w6gcV+qUfLwDB0BQ==
 shared-rand-current-value 0 zxJao+gBmFMSezvz/VXkEWEQJD5b/z+7AXNCGoLFVW0=
 dir-key-certificate-version 3
@@ -63,7 +64,16 @@ mWh1mO5vbcWEesouk0y81hFQFzKsQ+lebNUcdUFndAu/1aKioc0VPKJAToZxSMNY
 MR7LXDXhUdOCjp9J741xbXJmpQUjCX/6x9bvoVfdiRL2iraIq7kftEhufrtivoFQ
 70bmftfV8DRijpnaq2/lxLklKT7/bsaDmo0OmxUC2KWgq6BL1lyjyfDuyHHpIGen
 -----END SIGNATURE-----
-r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo SukLMJzLe7Bz+4giBI0ZDC3W5dM 2021-04-14 18:01:00 10.0.0.2 5000 9031
+r VM3 gtr/bGhmn3ubJiqlQFe/7DXywrc +qe3HKXEEQgzfU9oAku/2uFmUic 2021-04-14 18:23:20 10.0.0.3 5000 9033
+s Fast Guard Stable V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0
+p reject 1-65535
+id ed25519 sMQ7Z8WCIA8eLN1atJB7oXi0mq2XpWqtZt3i1eMyci0
+m 28,29 sha256=m8tnUA6CM78y+dTJd1B0uWShIlbA6mIQBESGI3GHIrI
+m 30 sha256=pgiyE1/Vpz8+EiHEwPzHysh+CztRVLqUcIwuBrd3KpY
+r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo DuUtg8Drl1X8fm4oXsOVlGEPNLc 2021-04-14 18:23:22 10.0.0.2 5000 9031
 s Authority Fast Guard HSDir Running Stable V2Dir Valid
 v Tor 0.4.5.7
 pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
@@ -75,10 +85,10 @@ m 30 sha256=+tBZkLzlB1OaA2KCsZRHtSLzjsWpPJg9XY1627e5jXY
 directory-footer
 directory-signature E45393E0B407D3CC278E44AF08896FA2CF4A14D3 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
 -----BEGIN SIGNATURE-----
-iuStFAPfok28gwY6IIjeC/HAgAiItF16yTvTj604JfsdIxGuFU5oL9jxkVTiuj9L
-/uQ3/xN7IeL17syrNOQWiCAIFrhnr9etBn0PGKoOtVFP02XuOp2xBcdQ0gcF1uPl
-5LNYW8QnmoctNoVvR49+UkEZ3btLuVA2vyZ4wEuUcj1Z94V4iPdWJAOl/ohtZn+n
-Wto12nc4f1zZcW+Ri6SpvGDBv7OGfazvlUbNBa+d6WWvyRm0r2eJZDBFWG8Td/FR
-UvOqj2reQKs98uaL8t5AwleKpi02dCptTZyfr7UKx5537EGJIcuhwkpFUz4l/Ud2
-KfCL+NQIqpxdBYfYc46w0Q==
+hdBfAq6FdbiSwk0D7anPuNGgW0j14vgGvmZ2ULXdeyqnY4zHXQNkA3qIpcmlFv6a
+0YgBRGCIU3Sw36vqX3AAOgLDE2Jgz7o5HW4FelcSGqWUCEHU0pLpcnBT98n/GAYD
+7iLw7hEA+H/8nOlLioUnBOSB1sXfzNnDL03X7mzDDb53IqYXtD7ElqFj3B5Cb5Js
+nr7IgdAsW6UwH0cjlCt3RtAR0ISL/Wj0IBR07wERzE2QsNJ7qrsc+PVB1hytQ4b0
+ojWZw357e5UHmrqFPJVaR7cZI3s7HlkWBq8kHiVgtO0cXZ8W7kfJFBLF6tnrs2pv
+vMGlKAT5VfwHrkBQL3YpGQ==
 -----END SIGNATURE-----

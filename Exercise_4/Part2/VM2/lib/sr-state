@@ -1,10 +1,11 @@
-# Tor shared random state file last generated on 2021-04-14 18:01:00 local time
+# Tor shared random state file last generated on 2021-04-14 18:29:31 local time
 # Other times below are in UTC
 # Please *do not* edit this file.
 
 Commit 1 sha3-256 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 AAAAAGB3LaCa7R9tXA/9lFvTzAuwKOrkT3Z588w6gcV+qUfLwDB0BQ== AAAAAGB3LaCU28yjKXS1SgF1alpxkNxz9YBrRHjAPGSPj7rkBRztgA==
+Commit 1 sha3-256 7E96051880347AC992A29003414D523F2EF72D84 AAAAAGB3M3y3H0byJasxGSyt8EdtMsIg9TXb/OaJY3Q/S8Q1XQyZIg==
 SharedRandCurrentValue 0 zxJao+gBmFMSezvz/VXkEWEQJD5b/z+7AXNCGoLFVW0=
 TorVersion 0.4.5.7
-ValidAfter 2021-04-14 18:02:30
+ValidAfter 2021-04-14 18:30:00
 ValidUntil 2021-04-14 19:57:30
 Version 1

@@ -1,9 +1,9 @@
 network-status-version 3
 vote-status consensus
 consensus-method 30
-valid-after 2021-04-14 18:02:30
-fresh-until 2021-04-14 18:07:30
-valid-until 2021-04-14 18:17:30
+valid-after 2021-04-14 18:25:00
+fresh-until 2021-04-14 18:30:00
+valid-until 2021-04-14 18:40:00
 voting-delay 20 20
 client-versions 
 server-versions 
@@ -12,11 +12,13 @@ recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2
 recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
 required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
 required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
-shared-rand-current-value 0 zxJao+gBmFMSezvz/VXkEWEQJD5b/z+7AXNCGoLFVW0=
+dir-source VM3 7E96051880347AC992A29003414D523F2EF72D84 10.0.0.3 10.0.0.3 9033 5000
+contact abcd@xyz.com
+vote-digest BA6CC8AABEDD0296C845F44942DAC786697C2A68
 dir-source VM2 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2 10.0.0.2 9031 5000
 contact abc@xyz.com
-vote-digest CC27977984B0AFA2B73B977420AB1FDF29EBAE7A
-r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo SukLMJzLe7Bz+4giBI0ZDC3W5dM 2021-04-14 18:01:00 10.0.0.2 5000 9031
+vote-digest 439BE5472DBAA731D84AAF3ED2F5F82D3AF72FB1
+r VM2 mtaGIlvfBbBpVTG60OYo3ZUwBxo DuUtg8Drl1X8fm4oXsOVlGEPNLc 2021-04-14 18:23:22 10.0.0.2 5000 9031
 s Authority Fast Guard HSDir Running Stable V2Dir Valid
 v Tor 0.4.5.7
 pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
@@ -26,10 +28,10 @@ directory-footer
 bandwidth-weights Wbd=3333 Wbe=0 Wbg=0 Wbm=10000 Wdb=10000 Web=10000 Wed=3333 Wee=10000 Weg=3333 Wem=10000 Wgb=10000 Wgd=3333 Wgg=10000 Wgm=10000 Wmb=10000 Wmd=3333 Wme=0 Wmg=0 Wmm=10000
 directory-signature E45393E0B407D3CC278E44AF08896FA2CF4A14D3 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
 -----BEGIN SIGNATURE-----
-gVkQtLUS9T9aLYSJBQQWK7oFMVcZSbkrmKohL88WaMg7bWyWPBLb/KOPlv7rk+CE
-DUnNeo3OeEjKg88mkMc50g4kx+Igs4UDtETwtTNVPVuB4nAy5uUQNysqSbE7xxR4
-cR17YLmPropYSkv6j5yOKSKVmWltCB/TqgptyaiNlmXLVWxwyQnhppqsfS1IF5r8
-TmMkXCv15qjS88BC23EH8DV9JEd5PZwcK/nunigMripr6JedctQAu8JjoIQRjHDx
-U9+k/M5TlIBxmuDVEb/z7u1ireHwCi66fXzwLzxmpKE915K+F/vIYasfMP7kUhcK
-fDUt69zm68c/VWd6NEeP7Q==
+jj2q7sk6poAO69LjTnWG4Z2Keo5IiG0Iyv9OewTxtpvad5hEJTA3+zHTdmsBX6KN
+e8yi9m+nq9D9Nf+Rds5E7yD3vhFJHJojiUdSPZKQo2P6x3+i/UnYg2RAVyr8VqJz
+7BEmghaomLeZjV0jpEaPppHcV2t/d4KYb49TsOCbB9KLlRD0oUCafVo1xVlqHnUy
+Uxmxkr4VkMEVIlgASBD7bVfQA1rFiRZvUbUWJ02N9MrnSrYl/+8WojmJjK4Zd9ch
+fR9EsABLVyEdJB1Cl6daeSE2wQ4+lbncTiqjLk21752HYF2k/NCiblpBVgXU3r5s
+m7Gjux9M9Pe3u9poPQylOg==
 -----END SIGNATURE-----
