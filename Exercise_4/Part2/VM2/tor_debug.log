@@ -1,787 +1,359 @@
-Apr 14 17:06:10.000 [notice] Tor 0.4.5.7 opening new log file.
-Apr 14 17:06:10.186 [notice] We compiled with OpenSSL 101010af: OpenSSL 1.1.1j  16 Feb 2021 and we are running with OpenSSL 1010109f: 1.1.1i. These two versions should be binary compatible.
-Apr 14 17:06:10.187 [notice] Tor 0.4.5.7 running on Linux with Libevent 2.1.12-stable, OpenSSL 1.1.1i, Zlib 1.2.11, Liblzma 5.2.5, Libzstd 1.4.9 and Glibc 2.33 as libc.
-Apr 14 17:06:10.187 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://www.torproject.org/download/download#warning
-Apr 14 17:06:10.187 [notice] Read configuration file "/home/user/NSSII/Exercise_4/Part2/VM2/./VM2".
-Apr 14 17:06:10.188 [warn] Path for DataDirectory (./lib) is relative and will resolve to /home/user/NSSII/Exercise_4/Part2/VM2/./lib. Is this what you wanted?
-Apr 14 17:06:10.188 [warn] Your ContactInfo config option is not set. Please strongly consider setting it, so we can contact you if your relay is misconfigured, end-of-life, or something else goes wrong. It is also possible that your relay might get rejected from the network due to a missing valid contact address.
-Apr 14 17:06:10.188 [notice] Based on detected system memory, MaxMemInQueues is set to 737 MB. You can override this by setting MaxMemInQueues by hand.
-Apr 14 17:06:10.188 [warn] You have used DirAuthority or AlternateDirAuthority to specify alternate directory authorities in your configuration. This is potentially dangerous: it can make you look different from all other Tor users, and hurt your anonymity. Even if you've specified the same authorities as Tor uses by default, the defaults could change in the future. Be sure you know what you're doing.
-Apr 14 17:06:10.188 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
-Apr 14 17:06:10.188 [warn] TestingTorNetwork is set. This will make your node almost unusable in the public Tor network, and is therefore only advised if you are building a testing Tor network!
-Apr 14 17:06:10.188 [notice] Opening OR listener on 0.0.0.0:5000
-Apr 14 17:06:10.188 [notice] Opened OR listener connection (ready) on 0.0.0.0:5000
-Apr 14 17:06:10.188 [notice] Opening OR listener on [::]:5000
-Apr 14 17:06:10.188 [notice] Opened OR listener connection (ready) on [::]:5000
-Apr 14 17:06:10.188 [notice] Opening Directory listener on 10.0.0.2:9031
-Apr 14 17:06:10.188 [notice] Opened Directory listener connection (ready) on 10.0.0.2:9031
-Apr 14 17:06:10.000 [warn] Your log may contain sensitive information - you're logging more than "notice". Don't log unless it serves an important reason. Overwrite the log afterwards.
-Apr 14 17:06:10.000 [info] options_commit_listener_transaction(): Recomputed OOS thresholds: ConnLimit 1000, ConnLimit_ 4064, ConnLimit_high_thresh 4000, ConnLimit_low_thresh 3048
-Apr 14 17:06:10.000 [info] crypto_openssl_late_init(): NOT using OpenSSL engine support.
-Apr 14 17:06:10.000 [info] evaluate_evp_for_aes(): This version of OpenSSL has a known-good EVP counter-mode implementation. Using it.
-Apr 14 17:06:10.000 [debug] tor_disable_debugger_attach(): Attempting to disable debugger attachment to Tor for unprivileged users.
-Apr 14 17:06:10.000 [info] tor_lockfile_lock(): Locking "./lib/lock"
-Apr 14 17:06:10.000 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
-Apr 14 17:06:10.000 [debug] parse_dir_authority_line(): Trusted 100 dirserver at 10.0.0.2:9031 (5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F)
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/state
-Apr 14 17:06:10.000 [debug] subsystems_register_state_formats(): Added state format for mainloop with index 0
-Apr 14 17:06:10.000 [info] or_state_load(): Loaded state from "./lib/state"
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/router-stability": No such file or directory
-Apr 14 17:06:10.000 [debug] check_private_dir(): stat()ing ./lib
-Apr 14 17:06:10.000 [debug] check_private_dir(): stat()ing ./lib/keys
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/authority_signing_key
-Apr 14 17:06:10.000 [info] init_keys(): Reading/making identity key "./lib/keys/secret_id_key"...
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/secret_id_key
-Apr 14 17:06:10.000 [info] init_key_from_file(): No key found in "./lib/keys/secret_id_key"; generating fresh key.
-Apr 14 17:06:10.000 [info] init_key_from_file(): Generated key seems valid
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/secret_id_key.tmp to ./lib/keys/secret_id_key
-Apr 14 17:06:10.000 [notice] You are running a new relay. Thanks for helping the Tor network! If you wish to know what will happen in the upcoming weeks regarding its usage, have a look at https://blog.torproject.org/blog/lifecycle-of-a-new-relay
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_signing_secret_key": No such file or directory
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_signing_secret_key_encrypted
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_signing_public_key": No such file or directory
-Apr 14 17:06:10.000 [info] No key found in ./lib/keys/ed25519_signing_secret_key.
-Apr 14 17:06:10.000 [notice] It looks like I need to generate and sign a new medium-term signing key, because I don't have one. To do that, I need to load (or create) the permanent master identity key. If the master identity key was not moved or encrypted with a passphrase, this will be done automatically and no further action is required. Otherwise, provide the necessary data using 'tor --keygen' to do it manually.
-Apr 14 17:06:10.000 [debug] check_private_dir(): stat()ing ./lib
-Apr 14 17:06:10.000 [debug] check_private_dir(): stat()ing ./lib/keys
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_master_id_secret_key": No such file or directory
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_master_id_secret_key_encrypted
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_master_id_public_key": No such file or directory
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_master_id_secret_key.tmp to ./lib/keys/ed25519_master_id_secret_key
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_master_id_public_key.tmp to ./lib/keys/ed25519_master_id_public_key
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_signing_secret_key.tmp to ./lib/keys/ed25519_signing_secret_key
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_signing_cert.tmp to ./lib/keys/ed25519_signing_cert
-Apr 14 17:06:10.000 [info] init_keys(): Reading/making onion key "./lib/keys/secret_onion_key"...
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key
-Apr 14 17:06:10.000 [info] init_key_from_file(): No key found in "./lib/keys/secret_onion_key"; generating fresh key.
-Apr 14 17:06:10.000 [info] init_key_from_file(): Generated key seems valid
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/secret_onion_key.tmp to ./lib/keys/secret_onion_key
-Apr 14 17:06:10.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: set onion key
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key.old
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor
-Apr 14 17:06:10.000 [info] init_curve25519_keypair_from_file(): No key found in "./lib/keys/secret_onion_key_ntor"; generating fresh key.
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/keys/secret_onion_key_ntor.tmp to ./lib/keys/secret_onion_key_ntor
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor.old
-Apr 14 17:06:10.000 [info] router_write_fingerprint(): Dumping fingerprint to "./lib/fingerprint"...
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/fingerprint": No such file or directory
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/fingerprint.tmp to ./lib/fingerprint
-Apr 14 17:06:10.000 [notice] Your Tor server's identity key  fingerprint is 'VM2 9AD686225BDF05B0695531BAD0E628DD9530071A'
-Apr 14 17:06:10.000 [info] router_write_fingerprint(): Dumping ed25519 identity to "./lib/fingerprint-ed25519"...
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/fingerprint-ed25519": No such file or directory
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/fingerprint-ed25519.tmp to ./lib/fingerprint-ed25519
-Apr 14 17:06:10.000 [notice] Your Tor server's identity key ed25519 fingerprint is 'VM2 THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE'
-Apr 14 17:06:10.000 [info] dirserv_load_fingerprint_file(): Reloading approved fingerprints from "./lib/approved-routers"...
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/approved-routers": No such file or directory
-Apr 14 17:06:10.000 [warn] Cannot open fingerprint file './lib/approved-routers'. That's ok.
-Apr 14 17:06:10.000 [debug] get_address_from_config(): Attempting to get address from configuration
-Apr 14 17:06:10.000 [info] get_address_from_config(): Address found in configuration: 10.0.0.2
-Apr 14 17:06:10.000 [info] init_keys(): adding my own v3 cert
-Apr 14 17:06:10.000 [debug] trusted_dirs_load_certs_from_string(): Parsed certificate for (null)
-Apr 14 17:06:10.000 [info] trusted_dirs_load_certs_from_string(): Adding downloaded certificate for directory authority (null) with signing key 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
-Apr 14 17:06:10.000 [info] check_private_dir(): Creating directory ./lib/diff-cache
-Apr 14 17:06:10.000 [debug] parse_addr_policy(): Adding new entry 'reject *:*'
-Apr 14 17:06:10.000 [info] tor_addr_parse_mask_ports(): '*:*' expands into rules which apply to all IPv4 and IPv6 addresses. (Use accept/reject *4:* for IPv4 or accept[6]/reject[6] *6:* for IPv6.)
-Apr 14 17:06:10.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
-Apr 14 17:06:10.000 [debug] scheduler_can_use_kist(): Determined KIST sched_run_interval should be 10. Can use KIST.
-Apr 14 17:06:10.000 [info] scheduler_kist_set_full_mode(): Setting KIST scheduler with kernel support (KIST mode)
-Apr 14 17:06:10.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
-Apr 14 17:06:10.000 [info] cmux_ewma_set_options(): Enabled cell_ewma algorithm because of value in CircuitPriorityHalflifeMsec in consensus; scale factor is 0.793701 per 10 seconds
-Apr 14 17:06:10.000 [notice] Parsing GEOIP IPv4 file /usr/share/tor/geoip.
-Apr 14 17:06:10.000 [notice] Parsing GEOIP IPv6 file /usr/share/tor/geoip6.
-Apr 14 17:06:10.000 [info] options_act_relay_stats(): Configured to measure hidden service statistics.
-Apr 14 17:06:10.000 [notice] Configured to measure statistics. Look for the *-stats files that will first be written to the data directory in 24 hours from now.
-Apr 14 17:06:10.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: config change
-Apr 14 17:06:10.000 [info] circpad_machine_client_hide_intro_circuits(): Registered client intro point hiding padding machine (0)
-Apr 14 17:06:10.000 [info] circpad_machine_relay_hide_intro_circuits(): Registered relay intro circuit hiding padding machine (0)
-Apr 14 17:06:10.000 [info] circpad_machine_client_hide_rend_circuits(): Registered client rendezvous circuit hiding padding machine (1)
-Apr 14 17:06:10.000 [info] circpad_machine_relay_hide_rend_circuits(): Registered relay rendezvous circuit hiding padding machine (1)
-Apr 14 17:06:10.000 [info] add_predicted_port(): New port prediction added. Will continue predictive circ building for 3081 more seconds.
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/unparseable-descs
-Apr 14 17:06:10.000 [notice] Bootstrapped 0% (starting): Starting
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/key-pinning-journal" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/cached-certs": No such file or directory
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/cached-consensus" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/unverified-consensus" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdesc-consensus" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/unverified-microdesc-consensus" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdescs" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [info] read_file_to_str(): Could not open "./lib/cached-microdescs.new": No such file or directory
-Apr 14 17:06:10.000 [info] microdesc_cache_reload(): Reloaded microdescriptor cache. Found 0 descriptors.
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/cached-descriptors" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/cached-descriptors.new
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/cached-certs.tmp to ./lib/cached-certs
-Apr 14 17:06:10.000 [info] tor_mmap_file(): Could not open "./lib/cached-extrainfo" for mmap(): No such file or directory
-Apr 14 17:06:10.000 [debug] file_status(): stat()ing ./lib/cached-extrainfo.new
-Apr 14 17:06:10.000 [notice] Starting with guard context "default"
-Apr 14 17:06:10.000 [debug] get_guard_selection_by_name(): Creating a guard selection called default
-Apr 14 17:06:10.000 [info] sampled_guards_update_from_consensus(): Not updating the sample guard set; we have no reasonably live consensus.
-Apr 14 17:06:10.000 [info] first_reachable_filtered_entry_guard(): Trying to sample a reachable guard: We know of 0 in the USABLE_FILTERED set.
-Apr 14 17:06:10.000 [info] first_reachable_filtered_entry_guard():   (That isn't enough. Trying to expand the sample.)
-Apr 14 17:06:10.000 [info] entry_guards_expand_sample(): Not expanding the sample guard set; we have no reasonably live consensus.
-Apr 14 17:06:10.000 [info] first_reachable_filtered_entry_guard():   (After filters [b], we have 0 guards to consider.)
-Apr 14 17:06:10.000 [info] I learned some more directory information, but not enough to build a circuit: We have no usable consensus.
-Apr 14 17:06:10.000 [warn] Could not open "./lib/sr-state": No such file or directory
-Apr 14 17:06:10.000 [warn] SR: Unable to read SR state file "./lib/sr-state"
-Apr 14 17:06:10.000 [info] Choosing expected valid-after time as 2021-04-14 17:07:30: consensus_set=0, interval=150
-Apr 14 17:06:10.000 [debug] get_state_valid_until_time(): SR: Valid until time for state set to 2021-04-14 18:00:00.
-Apr 14 17:06:10.000 [debug] get_state_valid_until_time(): SR: Valid until time for state set to 2021-04-14 18:00:00.
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/sr-state.tmp to ./lib/sr-state
-Apr 14 17:06:10.000 [debug] disk_state_save_to_disk(): SR: Saved state to file ./lib/sr-state
-Apr 14 17:06:10.000 [debug] tor_rename(): Renaming ./lib/sr-state.tmp to ./lib/sr-state
-Apr 14 17:06:10.000 [debug] disk_state_save_to_disk(): SR: Saved state to file ./lib/sr-state
-Apr 14 17:06:10.000 [info] sr_state_update(): SR: State prepared for upcoming voting period (2021-04-14 17:07:30). Upcoming phase is reveal (counters: 0 commit & 1 reveal rounds).
-Apr 14 17:06:10.000 [debug] configure_nameservers(): stat()ing /etc/resolv.conf
-Apr 14 17:06:10.000 [debug] configure_nameservers(): Loading /etc/hosts
-Apr 14 17:06:10.000 [info] configure_nameservers(): Parsing resolver configuration in '/etc/resolv.conf'
-Apr 14 17:06:10.000 [info] eventdns: Parsing resolv.conf file /etc/resolv.conf
-Apr 14 17:06:10.000 [info] eventdns: Added nameserver [::1]:53 as 0x562b72883c20
-Apr 14 17:06:10.000 [info] eventdns: Added nameserver 127.0.0.1:53 as 0x562b73256690
-Apr 14 17:06:10.000 [info] eventdns: Setting maximum allowed timeouts to 10
-Apr 14 17:06:10.000 [info] eventdns: Setting maximum inflight requests to 8192
-Apr 14 17:06:10.000 [info] eventdns: Setting timeout to 5
-Apr 14 17:06:10.000 [info] eventdns: Setting retries to 3
-Apr 14 17:06:10.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
-Apr 14 17:06:10.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' ns consensus found; not making diffs
-Apr 14 17:06:10.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' microdesc consensus found; not making diffs
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event add_entropy
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event heartbeat
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reset_padding_counts
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event second_elapsed
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_listeners
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_expired_networkstatus
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event fetch_networkstatus
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event launch_descriptor_fetches
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_x509_certificate
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_network_participation
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_caches
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event save_state
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event write_stats_file
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event prune_old_routers
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event hs_service
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event record_bridge_stats
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rend_cache_failure_clean
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_consdiffmgr
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event control_per_second_events
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_canonical_channels
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event expire_old_circuits_serverside
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_dns
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_dns_honesty
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_onion_key
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_descriptor
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_for_reachability_bw
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reachability_warnings
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_ed_keys
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_onion_keys_expiry_time
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event downrate_stability
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event launch_reachability_tests
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event save_stability
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_authority_cert
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event dirvote
-Apr 14 17:06:11.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event write_bridge_ns
-Apr 14 17:06:11.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
-Apr 14 17:06:11.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
-Apr 14 17:06:11.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:11.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:11.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:11.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393+E45393.z
-Apr 14 17:06:11.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 150, payload size: 0)
-Apr 14 17:06:11.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:11.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
-Apr 14 17:06:11.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:11.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:11.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 16).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:11.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:11.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:11.000 [debug] tor_rename(): Renaming ./lib/state.tmp to ./lib/state
-Apr 14 17:06:11.000 [info] or_state_save(): Saved state to "./lib/state"
-Apr 14 17:06:11.000 [debug] prune_old_routers_callback(): Pruning routerlist...
-Apr 14 17:06:11.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
-Apr 14 17:06:11.000 [info] channel_check_for_duplicates(): Performed connection pruning. Found 0 connections to 0 relays. Found 0 current canonical connections, in 0 of which we were a non-canonical peer. 0 relays had more than 1 connection, 0 had more than 2, and 0 had more than 4 connections.
-Apr 14 17:06:11.000 [info] router_rebuild_descriptor(): Rebuilding relay descriptor
-Apr 14 17:06:11.000 [debug] get_address_from_config(): Attempting to get address from configuration
-Apr 14 17:06:11.000 [info] get_address_from_config(): No Address option found for family IPv6 in configuration.
-Apr 14 17:06:11.000 [debug] get_address_from_orport(): Attempting to get address from ORPort
-Apr 14 17:06:11.000 [info] get_address_from_orport(): Address found from ORPort: ::
-Apr 14 17:06:11.000 [debug] parse_addr_policy(): Adding new entry 'reject *4:*'
-Apr 14 17:06:11.000 [debug] parse_addr_policy(): Adding new entry 'reject *6:*'
-Apr 14 17:06:11.000 [info] extrainfo_dump_to_string_stats_helper(): Adding stats to extra-info descriptor.
-Apr 14 17:06:11.000 [debug] file_status(): stat()ing ./lib/stats/dirreq-stats
-Apr 14 17:06:11.000 [debug] file_status(): stat()ing ./lib/stats/hidserv-stats
-Apr 14 17:06:11.000 [debug] router_dump_router_to_string(): My or-address line is <or-address [::]:5000
+Apr 14 17:11:28.000 [notice] Tor 0.4.5.7 opening new log file.
+Apr 14 17:11:28.756 [notice] We compiled with OpenSSL 101010af: OpenSSL 1.1.1j  16 Feb 2021 and we are running with OpenSSL 1010109f: 1.1.1i. These two versions should be binary compatible.
+Apr 14 17:11:28.757 [notice] Tor 0.4.5.7 running on Linux with Libevent 2.1.12-stable, OpenSSL 1.1.1i, Zlib 1.2.11, Liblzma 5.2.5, Libzstd 1.4.9 and Glibc 2.33 as libc.
+Apr 14 17:11:28.757 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://www.torproject.org/download/download#warning
+Apr 14 17:11:28.757 [notice] Read configuration file "/home/user/NSSII/Exercise_4/Part2/VM2/./VM2".
+Apr 14 17:11:28.758 [warn] Path for DataDirectory (./lib) is relative and will resolve to /home/user/NSSII/Exercise_4/Part2/VM2/./lib. Is this what you wanted?
+Apr 14 17:11:28.758 [notice] Based on detected system memory, MaxMemInQueues is set to 737 MB. You can override this by setting MaxMemInQueues by hand.
+Apr 14 17:11:28.758 [warn] You have used DirAuthority or AlternateDirAuthority to specify alternate directory authorities in your configuration. This is potentially dangerous: it can make you look different from all other Tor users, and hurt your anonymity. Even if you've specified the same authorities as Tor uses by default, the defaults could change in the future. Be sure you know what you're doing.
+Apr 14 17:11:28.758 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
+Apr 14 17:11:28.758 [warn] TestingTorNetwork is set. This will make your node almost unusable in the public Tor network, and is therefore only advised if you are building a testing Tor network!
+Apr 14 17:11:28.758 [notice] Opening OR listener on 0.0.0.0:5000
+Apr 14 17:11:28.758 [notice] Opened OR listener connection (ready) on 0.0.0.0:5000
+Apr 14 17:11:28.758 [notice] Opening OR listener on [::]:5000
+Apr 14 17:11:28.758 [notice] Opened OR listener connection (ready) on [::]:5000
+Apr 14 17:11:28.758 [notice] Opening Directory listener on 10.0.0.2:9031
+Apr 14 17:11:28.758 [notice] Opened Directory listener connection (ready) on 10.0.0.2:9031
+Apr 14 17:11:28.000 [warn] Your log may contain sensitive information - you're logging more than "notice". Don't log unless it serves an important reason. Overwrite the log afterwards.
+Apr 14 17:11:28.000 [info] options_commit_listener_transaction(): Recomputed OOS thresholds: ConnLimit 1000, ConnLimit_ 4064, ConnLimit_high_thresh 4000, ConnLimit_low_thresh 3048
+Apr 14 17:11:28.000 [info] crypto_openssl_late_init(): NOT using OpenSSL engine support.
+Apr 14 17:11:28.000 [info] evaluate_evp_for_aes(): This version of OpenSSL has a known-good EVP counter-mode implementation. Using it.
+Apr 14 17:11:28.000 [debug] tor_disable_debugger_attach(): Attempting to disable debugger attachment to Tor for unprivileged users.
+Apr 14 17:11:28.000 [info] tor_lockfile_lock(): Locking "./lib/lock"
+Apr 14 17:11:28.000 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
+Apr 14 17:11:28.000 [debug] parse_dir_authority_line(): Trusted 100 dirserver at 10.0.0.2:9031 (5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F)
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/state
+Apr 14 17:11:28.000 [debug] subsystems_register_state_formats(): Added state format for mainloop with index 0
+Apr 14 17:11:28.000 [info] or_state_load(): Loaded state from "./lib/state"
+Apr 14 17:11:28.000 [debug] check_private_dir(): stat()ing ./lib
+Apr 14 17:11:28.000 [debug] check_private_dir(): stat()ing ./lib/keys
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/authority_signing_key
+Apr 14 17:11:28.000 [info] init_keys(): Reading/making identity key "./lib/keys/secret_id_key"...
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/secret_id_key
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_signing_secret_key_encrypted
+Apr 14 17:11:28.000 [debug] check_private_dir(): stat()ing ./lib
+Apr 14 17:11:28.000 [debug] check_private_dir(): stat()ing ./lib/keys
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_master_id_public_key
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_master_id_secret_key_encrypted
+Apr 14 17:11:28.000 [info] init_keys(): Reading/making onion key "./lib/keys/secret_onion_key"...
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key
+Apr 14 17:11:28.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: set onion key
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key.old
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor.old
+Apr 14 17:11:28.000 [info] router_write_fingerprint(): Dumping fingerprint to "./lib/fingerprint"...
+Apr 14 17:11:28.000 [notice] Your Tor server's identity key  fingerprint is 'VM2 9AD686225BDF05B0695531BAD0E628DD9530071A'
+Apr 14 17:11:28.000 [info] router_write_fingerprint(): Dumping ed25519 identity to "./lib/fingerprint-ed25519"...
+Apr 14 17:11:28.000 [notice] Your Tor server's identity key ed25519 fingerprint is 'VM2 THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE'
+Apr 14 17:11:28.000 [info] dirserv_load_fingerprint_file(): Reloading approved fingerprints from "./lib/approved-routers"...
+Apr 14 17:11:28.000 [info] read_file_to_str(): Could not open "./lib/approved-routers": No such file or directory
+Apr 14 17:11:28.000 [warn] Cannot open fingerprint file './lib/approved-routers'. That's ok.
+Apr 14 17:11:28.000 [debug] get_address_from_config(): Attempting to get address from configuration
+Apr 14 17:11:28.000 [info] get_address_from_config(): Address found in configuration: 10.0.0.2
+Apr 14 17:11:28.000 [info] init_keys(): adding my own v3 cert
+Apr 14 17:11:28.000 [debug] trusted_dirs_load_certs_from_string(): Parsed certificate for (null)
+Apr 14 17:11:28.000 [info] trusted_dirs_load_certs_from_string(): Adding downloaded certificate for directory authority (null) with signing key 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
+Apr 14 17:11:28.000 [debug] check_private_dir(): stat()ing ./lib/diff-cache
+Apr 14 17:11:28.000 [debug] parse_addr_policy(): Adding new entry 'reject *:*'
+Apr 14 17:11:28.000 [info] tor_addr_parse_mask_ports(): '*:*' expands into rules which apply to all IPv4 and IPv6 addresses. (Use accept/reject *4:* for IPv4 or accept[6]/reject[6] *6:* for IPv6.)
+Apr 14 17:11:28.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
+Apr 14 17:11:28.000 [debug] scheduler_can_use_kist(): Determined KIST sched_run_interval should be 10. Can use KIST.
+Apr 14 17:11:28.000 [info] scheduler_kist_set_full_mode(): Setting KIST scheduler with kernel support (KIST mode)
+Apr 14 17:11:28.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
+Apr 14 17:11:28.000 [info] cmux_ewma_set_options(): Enabled cell_ewma algorithm because of value in CircuitPriorityHalflifeMsec in consensus; scale factor is 0.793701 per 10 seconds
+Apr 14 17:11:28.000 [notice] Parsing GEOIP IPv4 file /usr/share/tor/geoip.
+Apr 14 17:11:28.000 [notice] Parsing GEOIP IPv6 file /usr/share/tor/geoip6.
+Apr 14 17:11:28.000 [info] options_act_relay_stats(): Configured to measure hidden service statistics.
+Apr 14 17:11:28.000 [notice] Configured to measure statistics. Look for the *-stats files that will first be written to the data directory in 24 hours from now.
+Apr 14 17:11:28.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: config change
+Apr 14 17:11:28.000 [info] circpad_machine_client_hide_intro_circuits(): Registered client intro point hiding padding machine (0)
+Apr 14 17:11:28.000 [info] circpad_machine_relay_hide_intro_circuits(): Registered relay intro circuit hiding padding machine (0)
+Apr 14 17:11:28.000 [info] circpad_machine_client_hide_rend_circuits(): Registered client rendezvous circuit hiding padding machine (1)
+Apr 14 17:11:28.000 [info] circpad_machine_relay_hide_rend_circuits(): Registered relay rendezvous circuit hiding padding machine (1)
+Apr 14 17:11:28.000 [info] add_predicted_port(): New port prediction added. Will continue predictive circ building for 3142 more seconds.
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/unparseable-descs
+Apr 14 17:11:28.000 [notice] Bootstrapped 0% (starting): Starting
+Apr 14 17:11:28.000 [info] Loaded 1 entries from keypin journal. Found 0 corrupt lines (ignored), 0 duplicates (harmless), and 0 conflicts (resolved in favor of more recent entry).
+Apr 14 17:11:28.000 [debug] authority_cert_parse_from_string(): We already checked the signature on this certificate; no need to do so again.
+Apr 14 17:11:28.000 [debug] trusted_dirs_load_certs_from_string(): Parsed certificate for (null)
+Apr 14 17:11:28.000 [info] trusted_dirs_load_certs_from_string(): Skipping cached certificate for (null) that we already have.
+Apr 14 17:11:28.000 [debug] tor_rename(): Renaming ./lib/cached-certs.tmp to ./lib/cached-certs
+Apr 14 17:11:28.000 [info] tor_mmap_file(): Could not open "./lib/cached-consensus" for mmap(): No such file or directory
+Apr 14 17:11:28.000 [info] tor_mmap_file(): Could not open "./lib/unverified-consensus" for mmap(): No such file or directory
+Apr 14 17:11:28.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdesc-consensus" for mmap(): No such file or directory
+Apr 14 17:11:28.000 [info] tor_mmap_file(): Could not open "./lib/unverified-microdesc-consensus" for mmap(): No such file or directory
+Apr 14 17:11:28.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdescs" for mmap(): No such file or directory
+Apr 14 17:11:28.000 [info] microdesc_cache_reload(): Reloaded microdescriptor cache. Found 2 descriptors.
+Apr 14 17:11:28.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
+Apr 14 17:11:28.000 [info] router_load_routers_from_string(): 1 elements to add
+Apr 14 17:11:28.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
+Apr 14 17:11:28.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/cached-descriptors.new
+Apr 14 17:11:28.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
+Apr 14 17:11:28.000 [info] router_load_routers_from_string(): 1 elements to add
+Apr 14 17:11:28.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
+Apr 14 17:11:28.000 [debug] router_add_to_routerlist(): Replacing entry for router $9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2
+Apr 14 17:11:28.000 [info] router_rebuild_store(): Rebuilding router descriptors cache
+Apr 14 17:11:28.000 [debug] tor_rename(): Renaming ./lib/cached-descriptors.tmp to ./lib/cached-descriptors
+Apr 14 17:11:28.000 [info] router_rebuild_store(): Reconstructing pointers into cache
+Apr 14 17:11:28.000 [debug] tor_rename(): Renaming ./lib/cached-descriptors.new.tmp to ./lib/cached-descriptors.new
+Apr 14 17:11:28.000 [info] router_load_extrainfo_from_string(): 1 elements to add
+Apr 14 17:11:28.000 [info] router_rebuild_descriptor(): Rebuilding relay descriptor
+Apr 14 17:11:28.000 [debug] get_address_from_config(): Attempting to get address from configuration
+Apr 14 17:11:28.000 [info] get_address_from_config(): No Address option found for family IPv6 in configuration.
+Apr 14 17:11:28.000 [debug] get_address_from_orport(): Attempting to get address from ORPort
+Apr 14 17:11:28.000 [info] get_address_from_orport(): Address found from ORPort: ::
+Apr 14 17:11:28.000 [debug] parse_addr_policy(): Adding new entry 'reject *4:*'
+Apr 14 17:11:28.000 [debug] parse_addr_policy(): Adding new entry 'reject *6:*'
+Apr 14 17:11:28.000 [info] extrainfo_dump_to_string_stats_helper(): Adding stats to extra-info descriptor.
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/stats/dirreq-stats
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/stats/hidserv-stats
+Apr 14 17:11:28.000 [debug] router_dump_router_to_string(): My or-address line is <or-address [::]:5000
 >
-Apr 14 17:06:11.000 [info] router_upload_dir_desc_to_dirservers(): Uploading relay descriptor to directory authorities
-Apr 14 17:06:11.000 [info] directory_post_to_dirservers(): Uploading an extrainfo too (length 813)
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): Initiating server descriptor upload
-Apr 14 17:06:11.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:11.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 17).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 17, address 10.0.0.2, n_conns 6.
-Apr 14 17:06:11.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 8, request size: 3233, payload size: 3068)
-Apr 14 17:06:11.000 [info] directory_post_to_dirservers(): Uploading an extrainfo too (length 813)
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:11.000 [debug] directory_initiate_request(): Initiating server descriptor upload
-Apr 14 17:06:11.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:11.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 18).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 18, address 10.0.0.2, n_conns 7.
-Apr 14 17:06:11.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 8, request size: 3233, payload size: 3068)
-Apr 14 17:06:11.000 [debug] tor_rename(): Renaming ./lib/router-stability.tmp to ./lib/router-stability
-Apr 14 17:06:11.000 [notice] Scheduling voting.  Known authority IDs are E45393E0B407D3CC278E44AF08896FA2CF4A14D3, E45393E0B407D3CC278E44AF08896FA2CF4A14D3. Mine is E45393E0B407D3CC278E44AF08896FA2CF4A14D3.
-Apr 14 17:06:11.000 [info] Choosing expected valid-after time as 2021-04-14 17:07:30: consensus_set=0, interval=150
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:11.000 [debug] connection_handle_listener_read(): Connection accepted on socket 19 (child of fd 8).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 19, address 10.0.0.2, n_conns 8.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 17 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 18 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:11.000 [debug] connection_handle_listener_read(): Connection accepted on socket 20 (child of fd 8).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 20, address 10.0.0.2, n_conns 9.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 19 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 150 bytes. 150 on inbuf.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 150, bodylen 0.
-Apr 14 17:06:11.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:11.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus/E45393+E45393.z"'.
-Apr 14 17:06:11.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:11.000 [debug] connection_handle_listener_read(): Connection accepted on socket 21 (child of fd 8).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 21, address 10.0.0.2, n_conns 10.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 19 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 19).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 19 (type Directory), n_conns now 10
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 19.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 20 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:11.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:11.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:11.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:11.000 [debug] connection_handle_listener_read(): Connection accepted on socket 19 (child of fd 8).
-Apr 14 17:06:11.000 [debug] connection_add_impl(): new conn type Directory, socket 19, address 10.0.0.2, n_conns 10.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 20 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 20).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 20 (type Directory), n_conns now 10
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 20.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:11.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 21 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 3233 bytes. 3233 on inbuf.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 165, bodylen 3068.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): Got a contentlen of 3068.
-Apr 14 17:06:11.000 [debug] directory_handle_command_post(): Received POST command.
-Apr 14 17:06:11.000 [debug] directory_handle_command_post(): rewritten url as '"/tor/"'.
-Apr 14 17:06:11.000 [info] directory_handle_command_post(): New descriptor post, because: Tor just started
-Apr 14 17:06:11.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
-Apr 14 17:06:11.000 [info] dirserv_add_descriptor(): Assessing new descriptor: VM2: Tor 0.4.5.7 on Linux
-Apr 14 17:06:11.000 [info] dirserv_should_launch_reachability_test(): descriptor for new router $9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2
-Apr 14 17:06:11.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
-Apr 14 17:06:11.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
-Apr 14 17:06:11.000 [info] dirserv_single_reachability_test(): Testing reachability of VM2 at 10.0.0.2:5000.
-Apr 14 17:06:11.000 [debug] channel_tls_connect(): In channel_tls_connect() for channel 0x562b7325f480 (global id 1)
-Apr 14 17:06:11.000 [debug] channel_tls_connect(): Marking new outgoing channel 1 at 0x562b7325f480 as local
-Apr 14 17:06:11.000 [info] connection_or_connect(): Client asked me to connect to myself. Refusing.
-Apr 14 17:06:11.000 [debug] channel_change_state_(): Changing state of channel 0x562b7325f480 (global ID 1) from "opening" to "channel error"
-Apr 14 17:06:11.000 [debug] scheduler_set_channel_state(): chan 1 changed from scheduler state IDLE to IDLE
-Apr 14 17:06:11.000 [debug] circuitmux_free_(): Freeing cmux at 0x562b732621d0 with no queued destroys, the cmux destroy balance was 0, global is 0
-Apr 14 17:06:11.000 [info] dirserv_add_descriptor(): Added descriptor from 'VM2' (source: 10.0.0.2): Descriptor accepted.
-Apr 14 17:06:11.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 200 [None]'
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:11.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:11.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 9
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 21 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 21).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 21 (type Directory), n_conns now 8
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 21.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:11.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 19 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 3233 bytes. 3233 on inbuf.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 165, bodylen 3068.
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): Got a contentlen of 3068.
-Apr 14 17:06:11.000 [debug] directory_handle_command_post(): Received POST command.
-Apr 14 17:06:11.000 [debug] directory_handle_command_post(): rewritten url as '"/tor/"'.
-Apr 14 17:06:11.000 [info] directory_handle_command_post(): New descriptor post, because: Tor just started
-Apr 14 17:06:11.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
-Apr 14 17:06:11.000 [info] dirserv_add_descriptor(): Assessing new descriptor: VM2: Tor 0.4.5.7 on Linux
-Apr 14 17:06:11.000 [info] router_add_to_routerlist(): Dropping descriptor that we already have for router $9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2
-Apr 14 17:06:11.000 [info] dirserv_add_descriptor(): Did not add descriptor from 'VM2' (source: 10.0.0.2): Router descriptor was not new..
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Encountered eof on fd 16
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:11.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:11.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 7
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:11.000 [debug] conn_write_callback(): socket 19 wants to write.
-Apr 14 17:06:11.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 19).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 19 (type Directory), n_conns now 6
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 19.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 17 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 60 bytes. 60 on inbuf.
-Apr 14 17:06:11.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 17 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Encountered eof on fd 17
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Downloaded 60 bytes on connection of purpose server descriptor upload; bootstrap 0%
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 60, bodylen 0.
-Apr 14 17:06:11.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 200 "[None]" (purpose: 8, response size: 60, compression: 0)
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:11.000 [info] handle_response_upload_dir(): eof (status 200) after uploading server descriptor: finished.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 17).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 17 (type Directory), n_conns now 5
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 17.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 18 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Read 83 bytes. 83 on inbuf.
-Apr 14 17:06:11.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:11.000 [debug] conn_read_callback(): socket 18 wants to read.
-Apr 14 17:06:11.000 [debug] read_to_chunk(): Encountered eof on fd 18
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Downloaded 83 bytes on connection of purpose server descriptor upload; bootstrap 0%
-Apr 14 17:06:11.000 [debug] fetch_from_buf_http(): headerlen 83, bodylen 0.
-Apr 14 17:06:11.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 200 "OK" (purpose: 8, response size: 83, compression: 0)
-Apr 14 17:06:11.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:11.000 [info] handle_response_upload_dir(): Authority 'VM2' declined our descriptor (not new)
-Apr 14 17:06:11.000 [info] handle_response_upload_dir(): eof (status 200) after uploading server descriptor: finished.
-Apr 14 17:06:11.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 18).
-Apr 14 17:06:11.000 [debug] connection_remove(): removing socket 18 (type Directory), n_conns now 4
-Apr 14 17:06:11.000 [debug] connection_free_minimal(): closing fd 18.
-Apr 14 17:06:13.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
-Apr 14 17:06:13.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:06:13.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:13.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:13.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:13.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:13.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:13.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393+E45393.z
-Apr 14 17:06:13.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 150, payload size: 0)
-Apr 14 17:06:13.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:13.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:13.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:13.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:13.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 16).
-Apr 14 17:06:13.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:13.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:13.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:13.000 [debug] connection_handle_listener_read(): Connection accepted on socket 17 (child of fd 8).
-Apr 14 17:06:13.000 [debug] connection_add_impl(): new conn type Directory, socket 17, address 10.0.0.2, n_conns 6.
-Apr 14 17:06:13.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:13.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:13.000 [debug] connection_handle_listener_read(): Connection accepted on socket 18 (child of fd 8).
-Apr 14 17:06:13.000 [debug] connection_add_impl(): new conn type Directory, socket 18, address 10.0.0.2, n_conns 7.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 17 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Read 150 bytes. 150 on inbuf.
-Apr 14 17:06:13.000 [debug] fetch_from_buf_http(): headerlen 150, bodylen 0.
-Apr 14 17:06:13.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:13.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus/E45393+E45393.z"'.
-Apr 14 17:06:13.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:13.000 [debug] conn_write_callback(): socket 17 wants to write.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:13.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 17).
-Apr 14 17:06:13.000 [debug] connection_remove(): removing socket 17 (type Directory), n_conns now 7
-Apr 14 17:06:13.000 [debug] connection_free_minimal(): closing fd 17.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 18 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:13.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:13.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:13.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:13.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:13.000 [debug] conn_write_callback(): socket 18 wants to write.
-Apr 14 17:06:13.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:13.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 18).
-Apr 14 17:06:13.000 [debug] connection_remove(): removing socket 18 (type Directory), n_conns now 6
-Apr 14 17:06:13.000 [debug] connection_free_minimal(): closing fd 18.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:13.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:13.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:13.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:13.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:13.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:13.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:13.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:13.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 5
-Apr 14 17:06:13.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:13.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:13.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:13.000 [debug] read_to_chunk(): Encountered eof on fd 16
-Apr 14 17:06:13.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:13.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:13.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:13.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:13.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:13.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:13.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 4
-Apr 14 17:06:13.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:20.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
-Apr 14 17:06:20.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:06:20.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:20.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:20.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:20.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:20.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:20.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393+E45393.z
-Apr 14 17:06:20.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 150, payload size: 0)
-Apr 14 17:06:20.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:20.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:20.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:20.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:20.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 16).
-Apr 14 17:06:20.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:20.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:20.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:20.000 [debug] connection_handle_listener_read(): Connection accepted on socket 17 (child of fd 8).
-Apr 14 17:06:20.000 [debug] connection_add_impl(): new conn type Directory, socket 17, address 10.0.0.2, n_conns 6.
-Apr 14 17:06:20.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:20.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:20.000 [debug] connection_handle_listener_read(): Connection accepted on socket 18 (child of fd 8).
-Apr 14 17:06:20.000 [debug] connection_add_impl(): new conn type Directory, socket 18, address 10.0.0.2, n_conns 7.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 17 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Read 150 bytes. 150 on inbuf.
-Apr 14 17:06:20.000 [debug] fetch_from_buf_http(): headerlen 150, bodylen 0.
-Apr 14 17:06:20.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:20.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus/E45393+E45393.z"'.
-Apr 14 17:06:20.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:20.000 [debug] conn_write_callback(): socket 17 wants to write.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:20.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 17).
-Apr 14 17:06:20.000 [debug] connection_remove(): removing socket 17 (type Directory), n_conns now 7
-Apr 14 17:06:20.000 [debug] connection_free_minimal(): closing fd 17.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 18 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:20.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:20.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:20.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:20.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:20.000 [debug] conn_write_callback(): socket 18 wants to write.
-Apr 14 17:06:20.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:20.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 18).
-Apr 14 17:06:20.000 [debug] connection_remove(): removing socket 18 (type Directory), n_conns now 6
-Apr 14 17:06:20.000 [debug] connection_free_minimal(): closing fd 18.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:20.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:20.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:20.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:20.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:20.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:20.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:20.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:20.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 5
-Apr 14 17:06:20.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:20.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:20.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:20.000 [debug] read_to_chunk(): Encountered eof on fd 16
-Apr 14 17:06:20.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:20.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:20.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:20.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:20.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:20.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:20.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 4
-Apr 14 17:06:20.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:21.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:21.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:06:21.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:21.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:21.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:21.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:21.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:21.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:21.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:21.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:21.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:06:21.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:21.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:21.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:21.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:21.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:21.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:21.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:21.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:21.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:21.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:21.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:21.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:21.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:21.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:06:21.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:21.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:21.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:21.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:21.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:21.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:21.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:21.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:21.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:21.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:21.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:21.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:21.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:06:21.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:23.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:23.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:06:23.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:23.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:23.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:23.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:23.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:23.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:23.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:23.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:23.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:06:23.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:23.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:23.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:23.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:23.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:23.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:23.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:23.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:23.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:23.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:23.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:23.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:23.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:23.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:06:23.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:23.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:23.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:23.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:23.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:23.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:23.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:23.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:23.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:23.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:23.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:23.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:23.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:06:23.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:36.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:06:36.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:06:36.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:36.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:06:36.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:36.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:36.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:36.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:06:36.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:06:36.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:36.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:06:36.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:36.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:36.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:36.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:36.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:36.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:06:36.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:06:36.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:06:36.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:06:36.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:06:36.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:36.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:36.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:36.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:06:36.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:36.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:36.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:06:36.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:36.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:36.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:36.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:06:36.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:06:36.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:06:36.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:36.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:06:36.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:36.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:06:36.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:06:50.000 [notice] Time to vote.
-Apr 14 17:06:50.000 [debug] get_address_from_config(): Attempting to get address from configuration
-Apr 14 17:06:50.000 [info] get_address_from_config(): Address found in configuration: 10.0.0.2
-Apr 14 17:06:50.000 [info] dirserv_compute_performance_thresholds(): Cutoffs: For Stable, 39 sec uptime, 0 sec MTBF. For Fast: 0 kilobytes/sec. For Guard: WFU 0.000%, time-known 0 sec, and bandwidth 0 or 0 kilobytes/sec. We have enough stability data.
-Apr 14 17:06:50.000 [notice] Choosing valid-after time in vote as 2021-04-14 17:07:30: consensus_set=0, last_interval=150
-Apr 14 17:06:50.000 [debug] sr_get_string_for_vote(): SR: Preparing our vote info:
-Apr 14 17:06:50.000 [debug] authority_cert_parse_from_string(): We already checked the signature on this certificate; no need to do so again.
-Apr 14 17:06:50.000 [debug] authority_cert_parse_from_string(): We already checked the signature on this certificate; no need to do so again.
-Apr 14 17:06:50.000 [notice] Retrieved VM2's vote from self.
-Apr 14 17:06:50.000 [info] update_consensus_router_descriptor_downloads(): 0 router descriptors downloadable. 0 delayed; 1 present (0 of those were in old_routers); 0 would_reject; 0 wouldnt_use; 0 in progress.
-Apr 14 17:06:50.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:06:50.000 [debug] directory_initiate_request(): Initiating server vote upload
-Apr 14 17:06:50.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:06:50.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:06:50.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:06:50.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 10, request size: 4403, payload size: 4266)
-Apr 14 17:06:50.000 [notice] Vote posted.
-Apr 14 17:06:50.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:06:50.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:06:50.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:06:50.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:06:50.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:06:50.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:06:50.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:06:50.000 [debug] read_to_chunk(): Read 4403 bytes. 4403 on inbuf.
-Apr 14 17:06:50.000 [debug] fetch_from_buf_http(): headerlen 137, bodylen 4266.
-Apr 14 17:06:50.000 [debug] fetch_from_buf_http(): Got a contentlen of 4266.
-Apr 14 17:06:50.000 [debug] directory_handle_command_post(): Received POST command.
-Apr 14 17:06:50.000 [debug] directory_handle_command_post(): rewritten url as '"/tor/post/vote"'.
-Apr 14 17:06:50.000 [debug] authority_cert_parse_from_string(): We already checked the signature on this certificate; no need to do so again.
-Apr 14 17:06:50.000 [notice] VM2 posted a vote to me from 10.0.0.2.
-Apr 14 17:06:50.000 [info] update_consensus_router_descriptor_downloads(): 0 router descriptors downloadable. 0 delayed; 1 present (0 of those were in old_routers); 0 would_reject; 0 wouldnt_use; 0 in progress.
-Apr 14 17:06:50.000 [notice] Discarding a vote we already have (from 10.0.0.2).
-Apr 14 17:06:50.000 [warn] Rejected vote from 10.0.0.2:53784 ("Duplicate discarded").
-Apr 14 17:06:50.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 200 Duplicate discarded'
-Apr 14 17:06:50.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:06:50.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:06:50.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:06:50.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:06:50.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:06:50.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:50.000 [debug] read_to_chunk(): Read 73 bytes. 73 on inbuf.
-Apr 14 17:06:50.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:06:50.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:06:50.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:06:50.000 [debug] connection_dir_client_reached_eof(): Downloaded 73 bytes on connection of purpose server vote upload; bootstrap 0%
-Apr 14 17:06:50.000 [debug] fetch_from_buf_http(): headerlen 73, bodylen 0.
-Apr 14 17:06:50.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 200 "Duplicate discarded" (purpose: 10, response size: 73, compression: 0)
-Apr 14 17:06:50.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:06:50.000 [notice] Uploaded my vote to dirserver 10.0.0.2:9031
-Apr 14 17:06:50.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:06:50.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:06:50.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:07:00.000 [notice] Time to fetch any votes that we're missing.
-Apr 14 17:07:10.000 [notice] Time to compute a consensus.
-Apr 14 17:07:10.000 [debug] tor_rename(): Renaming ./lib/v3-status-votes.tmp to ./lib/v3-status-votes
-Apr 14 17:07:10.000 [debug] write_v3_votes_to_disk(): Wrote votes to disk (./lib/v3-status-votes)!
-Apr 14 17:07:10.000 [warn] We don't have enough votes to generate a consensus: 1 of 2
-Apr 14 17:07:10.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
-Apr 14 17:07:10.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:07:10.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:07:10.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:07:10.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:07:10.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:07:10.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:07:10.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393+E45393.z
-Apr 14 17:07:10.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 150, payload size: 0)
-Apr 14 17:07:10.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:07:10.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:07:10.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:07:10.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:07:10.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:07:10.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:07:10.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:07:10.000 [debug] read_to_chunk(): Read 150 bytes. 150 on inbuf.
-Apr 14 17:07:10.000 [debug] fetch_from_buf_http(): headerlen 150, bodylen 0.
-Apr 14 17:07:10.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:07:10.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus/E45393+E45393.z"'.
-Apr 14 17:07:10.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:07:10.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:07:10.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:07:10.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:07:10.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:07:10.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:07:10.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:07:10.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:07:10.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:07:10.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:07:10.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:07:10.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:07:10.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:07:10.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:07:10.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:07:10.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:07:10.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:07:10.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:07:10.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:07:11.000 [debug] get_address_from_config(): Attempting to get address from configuration
-Apr 14 17:07:11.000 [info] get_address_from_config(): No Address option found for family IPv6 in configuration.
-Apr 14 17:07:11.000 [debug] get_address_from_orport(): Attempting to get address from ORPort
-Apr 14 17:07:11.000 [info] get_address_from_orport(): Address found from ORPort: ::
-Apr 14 17:07:19.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
-Apr 14 17:07:19.000 [info] router_pick_dirserver_generic(): No dirservers are reachable. Trying them all again.
-Apr 14 17:07:19.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
-Apr 14 17:07:19.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
-Apr 14 17:07:19.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
-Apr 14 17:07:19.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
-Apr 14 17:07:19.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
-Apr 14 17:07:19.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
-Apr 14 17:07:19.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
-Apr 14 17:07:19.000 [debug] conn_read_callback(): socket 8 wants to read.
-Apr 14 17:07:19.000 [debug] connection_handle_listener_read(): Connection accepted on socket 16 (child of fd 8).
-Apr 14 17:07:19.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
-Apr 14 17:07:19.000 [debug] conn_write_callback(): socket 15 wants to write.
-Apr 14 17:07:19.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
-Apr 14 17:07:19.000 [debug] connection_dir_finished_flushing(): client finished sending command.
-Apr 14 17:07:19.000 [debug] conn_read_callback(): socket 16 wants to read.
-Apr 14 17:07:19.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
-Apr 14 17:07:19.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
-Apr 14 17:07:19.000 [debug] directory_handle_command_get(): Received GET command.
-Apr 14 17:07:19.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
-Apr 14 17:07:19.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
-Apr 14 17:07:19.000 [debug] conn_write_callback(): socket 16 wants to write.
-Apr 14 17:07:19.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
-Apr 14 17:07:19.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
-Apr 14 17:07:19.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 5
-Apr 14 17:07:19.000 [debug] connection_free_minimal(): closing fd 16.
-Apr 14 17:07:19.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:07:19.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
-Apr 14 17:07:19.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
-Apr 14 17:07:19.000 [debug] conn_read_callback(): socket 15 wants to read.
-Apr 14 17:07:19.000 [debug] read_to_chunk(): Encountered eof on fd 15
-Apr 14 17:07:19.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
-Apr 14 17:07:19.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
-Apr 14 17:07:19.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
-Apr 14 17:07:19.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
-Apr 14 17:07:19.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
-Apr 14 17:07:19.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
-Apr 14 17:07:19.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 4
-Apr 14 17:07:19.000 [debug] connection_free_minimal(): closing fd 15.
-Apr 14 17:07:20.000 [notice] Time to fetch any signatures that we're missing.
+Apr 14 17:11:28.000 [debug] file_status(): stat()ing ./lib/cached-extrainfo.new
+Apr 14 17:11:28.000 [info] router_load_extrainfo_from_string(): 2 elements to add
+Apr 14 17:11:28.000 [info] router_rebuild_store(): Rebuilding extra-info documents cache
+Apr 14 17:11:28.000 [debug] tor_rename(): Renaming ./lib/cached-extrainfo.tmp to ./lib/cached-extrainfo
+Apr 14 17:11:28.000 [info] router_rebuild_store(): Reconstructing pointers into cache
+Apr 14 17:11:28.000 [debug] tor_rename(): Renaming ./lib/cached-extrainfo.new.tmp to ./lib/cached-extrainfo.new
+Apr 14 17:11:28.000 [notice] Starting with guard context "default"
+Apr 14 17:11:28.000 [debug] get_guard_selection_by_name(): Creating a guard selection called default
+Apr 14 17:11:28.000 [info] sampled_guards_update_from_consensus(): Not updating the sample guard set; we have no reasonably live consensus.
+Apr 14 17:11:28.000 [info] first_reachable_filtered_entry_guard(): Trying to sample a reachable guard: We know of 0 in the USABLE_FILTERED set.
+Apr 14 17:11:28.000 [info] first_reachable_filtered_entry_guard():   (That isn't enough. Trying to expand the sample.)
+Apr 14 17:11:28.000 [info] entry_guards_expand_sample(): Not expanding the sample guard set; we have no reasonably live consensus.
+Apr 14 17:11:28.000 [info] first_reachable_filtered_entry_guard():   (After filters [b], we have 0 guards to consider.)
+Apr 14 17:11:28.000 [info] I learned some more directory information, but not enough to build a circuit: We have no usable consensus.
+Apr 14 17:11:28.000 [info] Choosing expected valid-after time as 2021-04-14 17:12:30: consensus_set=0, interval=150
+Apr 14 17:11:28.000 [debug] get_state_valid_until_time(): SR: Valid until time for state set to 2021-04-14 18:00:00.
+Apr 14 17:11:28.000 [debug] get_state_valid_until_time(): SR: Valid until time for state set to 2021-04-14 18:00:00.
+Apr 14 17:11:28.000 [info] disk_state_load_from_disk_impl(): SR: State loaded successfully from file ./lib/sr-state
+Apr 14 17:11:28.000 [info] sr_state_update(): SR: Asked to update state twice. Ignoring.
+Apr 14 17:11:28.000 [debug] configure_nameservers(): stat()ing /etc/resolv.conf
+Apr 14 17:11:28.000 [debug] configure_nameservers(): Loading /etc/hosts
+Apr 14 17:11:28.000 [info] configure_nameservers(): Parsing resolver configuration in '/etc/resolv.conf'
+Apr 14 17:11:28.000 [info] eventdns: Parsing resolv.conf file /etc/resolv.conf
+Apr 14 17:11:28.000 [info] eventdns: Added nameserver [::1]:53 as 0x55876e77e9b0
+Apr 14 17:11:28.000 [info] eventdns: Added nameserver 127.0.0.1:53 as 0x55876f16b8d0
+Apr 14 17:11:28.000 [info] eventdns: Setting maximum allowed timeouts to 10
+Apr 14 17:11:28.000 [info] eventdns: Setting maximum inflight requests to 8192
+Apr 14 17:11:28.000 [info] eventdns: Setting timeout to 5
+Apr 14 17:11:28.000 [info] eventdns: Setting retries to 3
+Apr 14 17:11:28.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
+Apr 14 17:11:28.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' ns consensus found; not making diffs
+Apr 14 17:11:28.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' microdesc consensus found; not making diffs
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event add_entropy
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event heartbeat
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reset_padding_counts
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event second_elapsed
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_listeners
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_expired_networkstatus
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event fetch_networkstatus
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event launch_descriptor_fetches
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_x509_certificate
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_network_participation
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_caches
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event save_state
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event write_stats_file
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event prune_old_routers
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event hs_service
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event record_bridge_stats
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rend_cache_failure_clean
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_consdiffmgr
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event control_per_second_events
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_canonical_channels
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event expire_old_circuits_serverside
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_dns
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_dns_honesty
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_onion_key
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_descriptor
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_for_reachability_bw
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reachability_warnings
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_ed_keys
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_onion_keys_expiry_time
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event downrate_stability
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event launch_reachability_tests
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event save_stability
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_authority_cert
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event dirvote
+Apr 14 17:11:29.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event write_bridge_ns
+Apr 14 17:11:29.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
+Apr 14 17:11:29.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:11:29.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:11:29.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:11:29.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 15).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 15, address 10.0.0.2, n_conns 4.
+Apr 14 17:11:29.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393+E45393.z
+Apr 14 17:11:29.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 150, payload size: 0)
+Apr 14 17:11:29.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
+Apr 14 17:11:29.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:11:29.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:11:29.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:11:29.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 16).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 16, address 10.0.0.2, n_conns 5.
+Apr 14 17:11:29.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393+E45393.z
+Apr 14 17:11:29.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 160, payload size: 0)
+Apr 14 17:11:29.000 [debug] tor_rename(): Renaming ./lib/state.tmp to ./lib/state
+Apr 14 17:11:29.000 [info] or_state_save(): Saved state to "./lib/state"
+Apr 14 17:11:29.000 [debug] prune_old_routers_callback(): Pruning routerlist...
+Apr 14 17:11:29.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
+Apr 14 17:11:29.000 [info] channel_check_for_duplicates(): Performed connection pruning. Found 0 connections to 0 relays. Found 0 current canonical connections, in 0 of which we were a non-canonical peer. 0 relays had more than 1 connection, 0 had more than 2, and 0 had more than 4 connections.
+Apr 14 17:11:29.000 [debug] get_address_from_config(): Attempting to get address from configuration
+Apr 14 17:11:29.000 [info] get_address_from_config(): No Address option found for family IPv6 in configuration.
+Apr 14 17:11:29.000 [debug] get_address_from_orport(): Attempting to get address from ORPort
+Apr 14 17:11:29.000 [info] get_address_from_orport(): Address found from ORPort: ::
+Apr 14 17:11:29.000 [info] router_upload_dir_desc_to_dirservers(): Uploading relay descriptor to directory authorities
+Apr 14 17:11:29.000 [info] directory_post_to_dirservers(): Uploading an extrainfo too (length 813)
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): Initiating server descriptor upload
+Apr 14 17:11:29.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:11:29.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 17).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 17, address 10.0.0.2, n_conns 6.
+Apr 14 17:11:29.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 8, request size: 3253, payload size: 3088)
+Apr 14 17:11:29.000 [info] directory_post_to_dirservers(): Uploading an extrainfo too (length 813)
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:11:29.000 [debug] directory_initiate_request(): Initiating server descriptor upload
+Apr 14 17:11:29.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:11:29.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 18).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 18, address 10.0.0.2, n_conns 7.
+Apr 14 17:11:29.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 8, request size: 3253, payload size: 3088)
+Apr 14 17:11:29.000 [debug] tor_rename(): Renaming ./lib/router-stability.tmp to ./lib/router-stability
+Apr 14 17:11:29.000 [notice] Scheduling voting.  Known authority IDs are E45393E0B407D3CC278E44AF08896FA2CF4A14D3, E45393E0B407D3CC278E44AF08896FA2CF4A14D3. Mine is E45393E0B407D3CC278E44AF08896FA2CF4A14D3.
+Apr 14 17:11:29.000 [info] Choosing expected valid-after time as 2021-04-14 17:12:30: consensus_set=0, interval=150
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 8 wants to read.
+Apr 14 17:11:29.000 [debug] connection_handle_listener_read(): Connection accepted on socket 19 (child of fd 8).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 19, address 10.0.0.2, n_conns 8.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 15 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): client finished sending command.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 16 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): client finished sending command.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 17 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): client finished sending command.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 18 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_connecting(): Dir connection to 10.0.0.2:9031 established.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): client finished sending command.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 8 wants to read.
+Apr 14 17:11:29.000 [debug] connection_handle_listener_read(): Connection accepted on socket 20 (child of fd 8).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 20, address 10.0.0.2, n_conns 9.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 19 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 150 bytes. 150 on inbuf.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 150, bodylen 0.
+Apr 14 17:11:29.000 [debug] directory_handle_command_get(): Received GET command.
+Apr 14 17:11:29.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus/E45393+E45393.z"'.
+Apr 14 17:11:29.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 8 wants to read.
+Apr 14 17:11:29.000 [debug] connection_handle_listener_read(): Connection accepted on socket 21 (child of fd 8).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 21, address 10.0.0.2, n_conns 10.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 19 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 19).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 19 (type Directory), n_conns now 10
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 19.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 20 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 160 bytes. 160 on inbuf.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 160, bodylen 0.
+Apr 14 17:11:29.000 [debug] directory_handle_command_get(): Received GET command.
+Apr 14 17:11:29.000 [debug] directory_handle_command_get(): rewritten url as '"/tor/status-vote/current/consensus-microdesc/E45393+E45393.z"'.
+Apr 14 17:11:29.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 404 Not found'
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 8 wants to read.
+Apr 14 17:11:29.000 [debug] connection_handle_listener_read(): Connection accepted on socket 19 (child of fd 8).
+Apr 14 17:11:29.000 [debug] connection_add_impl(): new conn type Directory, socket 19, address 10.0.0.2, n_conns 10.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 20 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 20).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 20 (type Directory), n_conns now 10
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 20.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 15 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
+Apr 14 17:11:29.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 21 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 3253 bytes. 3253 on inbuf.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 165, bodylen 3088.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): Got a contentlen of 3088.
+Apr 14 17:11:29.000 [debug] directory_handle_command_post(): Received POST command.
+Apr 14 17:11:29.000 [debug] directory_handle_command_post(): rewritten url as '"/tor/"'.
+Apr 14 17:11:29.000 [info] directory_handle_command_post(): New descriptor post, because: Tor just started
+Apr 14 17:11:29.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
+Apr 14 17:11:29.000 [info] dirserv_add_descriptor(): Assessing new descriptor: VM2: Tor 0.4.5.7 on Linux
+Apr 14 17:11:29.000 [debug] dirserv_get_status_impl(): 0 fingerprints, 1 digests known.
+Apr 14 17:11:29.000 [debug] router_add_to_routerlist(): Replacing entry for router $9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2
+Apr 14 17:11:29.000 [info] dirserv_add_descriptor(): Added descriptor from 'VM2' (source: 10.0.0.2): Valid server updated.
+Apr 14 17:11:29.000 [debug] write_short_http_response(): Wrote status 'HTTP/1.0 200 [None]'
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 15 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Encountered eof on fd 15
+Apr 14 17:11:29.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
+Apr 14 17:11:29.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
+Apr 14 17:11:29.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
+Apr 14 17:11:29.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 15).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 15 (type Directory), n_conns now 9
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 15.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 21 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 21).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 21 (type Directory), n_conns now 8
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 21.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 16 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 63 bytes. 63 on inbuf.
+Apr 14 17:11:29.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 19 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 3253 bytes. 3253 on inbuf.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 165, bodylen 3088.
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): Got a contentlen of 3088.
+Apr 14 17:11:29.000 [debug] directory_handle_command_post(): Received POST command.
+Apr 14 17:11:29.000 [debug] directory_handle_command_post(): rewritten url as '"/tor/"'.
+Apr 14 17:11:29.000 [info] directory_handle_command_post(): New descriptor post, because: Tor just started
+Apr 14 17:11:29.000 [debug] router_parse_list_from_string(): Read router '$9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2', purpose 'general'
+Apr 14 17:11:29.000 [info] dirserv_add_descriptor(): Assessing new descriptor: VM2: Tor 0.4.5.7 on Linux
+Apr 14 17:11:29.000 [info] router_add_to_routerlist(): Dropping descriptor that we already have for router $9AD686225BDF05B0695531BAD0E628DD9530071A~VM2 [THXq8H9xKlY1WYTaFVhxGZkXgyxJaMkkSNU+oO9eHlE] at 10.0.0.2
+Apr 14 17:11:29.000 [info] dirserv_add_descriptor(): Did not add descriptor from 'VM2' (source: 10.0.0.2): Router descriptor was not new..
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 16 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Encountered eof on fd 16
+Apr 14 17:11:29.000 [debug] connection_dir_client_reached_eof(): Downloaded 63 bytes on connection of purpose consensus network-status fetch; bootstrap 0%
+Apr 14 17:11:29.000 [debug] fetch_from_buf_http(): headerlen 63, bodylen 0.
+Apr 14 17:11:29.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 404 "Not found" (purpose: 14, response size: 63, compression: 0)
+Apr 14 17:11:29.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
+Apr 14 17:11:29.000 [warn] Received http status code 404 ("Not found") from server 10.0.0.2:9031 while fetching consensus directory.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 16).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 16 (type Directory), n_conns now 7
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 16.
+Apr 14 17:11:29.000 [debug] conn_write_callback(): socket 19 wants to write.
+Apr 14 17:11:29.000 [debug] connection_dir_finished_flushing(): Finished writing server response. Closing.
+Apr 14 17:11:29.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 19).
+Apr 14 17:11:29.000 [debug] connection_remove(): removing socket 19 (type Directory), n_conns now 6
+Apr 14 17:11:29.000 [debug] connection_free_minimal(): closing fd 19.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 17 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Read 60 bytes. 60 on inbuf.
+Apr 14 17:11:29.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
+Apr 14 17:11:29.000 [debug] conn_read_callback(): socket 17 wants to read.
+Apr 14 17:11:29.000 [debug] read_to_chunk(): Encountered eof on fd 17
+Apr 14 17:11:29.000 [debug] connection_dir_client_reached_eof(): Downloaded 60 bytes on connection of purpose server descriptor upload; bootstrap 0%
+Apr 14 17:11:30.000 [debug] fetch_from_buf_http(): headerlen 60, bodylen 0.
+Apr 14 17:11:30.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 200 "[None]" (purpose: 8, response size: 60, compression: 0)
+Apr 14 17:11:30.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
+Apr 14 17:11:30.000 [info] handle_response_upload_dir(): eof (status 200) after uploading server descriptor: finished.
+Apr 14 17:11:30.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 17).
+Apr 14 17:11:30.000 [debug] connection_remove(): removing socket 17 (type Directory), n_conns now 5
+Apr 14 17:11:30.000 [debug] connection_free_minimal(): closing fd 17.
+Apr 14 17:11:30.000 [debug] conn_read_callback(): socket 18 wants to read.
+Apr 14 17:11:30.000 [debug] read_to_chunk(): Read 83 bytes. 83 on inbuf.
+Apr 14 17:11:30.000 [debug] connection_dir_process_inbuf(): Got data, not eof. Leaving on inbuf.
+Apr 14 17:11:30.000 [debug] conn_read_callback(): socket 18 wants to read.
+Apr 14 17:11:30.000 [debug] read_to_chunk(): Encountered eof on fd 18
+Apr 14 17:11:30.000 [debug] connection_dir_client_reached_eof(): Downloaded 83 bytes on connection of purpose server descriptor upload; bootstrap 0%
+Apr 14 17:11:30.000 [debug] fetch_from_buf_http(): headerlen 83, bodylen 0.
+Apr 14 17:11:30.000 [debug] Received response on Directory connection (client reading) with 10.0.0.2:9031: 200 "OK" (purpose: 8, response size: 83, compression: 0)
+Apr 14 17:11:30.000 [debug] connection_dir_client_reached_eof(): Time on received directory is within tolerance; we are 0 seconds skewed.  (That's okay.)
+Apr 14 17:11:30.000 [info] handle_response_upload_dir(): Authority 'VM2' declined our descriptor (not new)
+Apr 14 17:11:30.000 [info] handle_response_upload_dir(): eof (status 200) after uploading server descriptor: finished.
+Apr 14 17:11:30.000 [debug] conn_close_if_marked(): Cleaning up connection (fd 18).
+Apr 14 17:11:30.000 [debug] connection_remove(): removing socket 18 (type Directory), n_conns now 4
+Apr 14 17:11:30.000 [debug] connection_free_minimal(): closing fd 18.

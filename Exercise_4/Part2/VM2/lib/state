@@ -1,4 +1,4 @@
-# Tor state file last generated on 2021-04-14 17:06:11 local time
+# Tor state file last generated on 2021-04-14 17:11:29 local time
 # Other times below are in UTC
 # You *do not* need to edit this file.
 
@@ -28,5 +28,5 @@ BWHistoryWriteMaxima 0
 BWHistoryWriteValues 0
 Dormant 0
 LastRotatedOnionKey 2021-04-14 17:06:10
-LastWritten 2021-04-14 17:06:11
+LastWritten 2021-04-14 17:11:29
 TorVersion Tor 0.4.5.7
