@@ -2,9 +2,11 @@
 # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
 from stem.control import Controller
 import stem
+import stem.process
 import getpass
 import subprocess
 from os import system
+from stem.util import term
 import os
 FILEPATH = "/tmp/relay_fingerprints.txt"
 PROG = "gedit"
@@ -14,8 +16,14 @@ EXIT_FINGERPRINT = '18EAE30A4585BEB0D63D36BCFE3F9CA786CB55C7'
 def clear():
 	clear = lambda: system('clear')
 
+# from https://stem.torproject.org/tutorials/to_russia_with_love.html
+def print_bootstrap_lines(line):
+  if "Bootstrapped " in line:
+    print(term.format(line, term.Color.BLUE))
+
 
 if __name__ == '__main__':
+	tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines, torrc_path="/etc/tor/torrc")
 	try: 
 		with Controller.from_port() as controller:
 			auth_err=0
@@ -77,5 +85,9 @@ if __name__ == '__main__':
 					print("::Killing tor")
 					args= ("systemctl" , "stop", "tor")
 					popen = subprocess.Popen(args, stdout=subprocess.PIPE)
+
 	except stem.SocketError as er:
 		print("Error: ", er, "\nTry starting tor service.")
+
+	# finally:
+		# tor_p.kill()
