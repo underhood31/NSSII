@@ -1,0 +1,235 @@
+Apr 14 17:18:51.000 [notice] Tor 0.4.5.7 opening new log file.
+Apr 14 17:18:51.326 [notice] We compiled with OpenSSL 101010af: OpenSSL 1.1.1j  16 Feb 2021 and we are running with OpenSSL 1010109f: 1.1.1i. These two versions should be binary compatible.
+Apr 14 17:18:51.327 [notice] Tor 0.4.5.7 running on Linux with Libevent 2.1.12-stable, OpenSSL 1.1.1i, Zlib 1.2.11, Liblzma 5.2.5, Libzstd 1.4.9 and Glibc 2.33 as libc.
+Apr 14 17:18:51.327 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://www.torproject.org/download/download#warning
+Apr 14 17:18:51.327 [notice] Read configuration file "/home/user/NSSII/Exercise_4/Part2/VM3/./VM3".
+Apr 14 17:18:51.328 [warn] Path for DataDirectory (./lib) is relative and will resolve to /home/user/NSSII/Exercise_4/Part2/VM3/./lib. Is this what you wanted?
+Apr 14 17:18:51.328 [warn] Your ContactInfo config option is not set. Please strongly consider setting it, so we can contact you if your relay is misconfigured, end-of-life, or something else goes wrong. It is also possible that your relay might get rejected from the network due to a missing valid contact address.
+Apr 14 17:18:51.328 [notice] Based on detected system memory, MaxMemInQueues is set to 737 MB. You can override this by setting MaxMemInQueues by hand.
+Apr 14 17:18:51.328 [notice] By default, Tor does not run as an exit relay. If you want to be an exit relay, set ExitRelay to 1. To suppress this message in the future, set ExitRelay to 0.
+Apr 14 17:18:51.328 [warn] You have used DirAuthority or AlternateDirAuthority to specify alternate directory authorities in your configuration. This is potentially dangerous: it can make you look different from all other Tor users, and hurt your anonymity. Even if you've specified the same authorities as Tor uses by default, the defaults could change in the future. Be sure you know what you're doing.
+Apr 14 17:18:51.328 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
+Apr 14 17:18:51.328 [warn] TestingTorNetwork is set. This will make your node almost unusable in the public Tor network, and is therefore only advised if you are building a testing Tor network!
+Apr 14 17:18:51.328 [notice] Opening OR listener on 0.0.0.0:5000
+Apr 14 17:18:51.328 [notice] Opened OR listener connection (ready) on 0.0.0.0:5000
+Apr 14 17:18:51.328 [notice] Opening OR listener on [::]:5000
+Apr 14 17:18:51.328 [notice] Opened OR listener connection (ready) on [::]:5000
+Apr 14 17:18:51.000 [warn] Your log may contain sensitive information - you're logging more than "notice". Don't log unless it serves an important reason. Overwrite the log afterwards.
+Apr 14 17:18:51.000 [info] options_commit_listener_transaction(): Recomputed OOS thresholds: ConnLimit 1000, ConnLimit_ 4064, ConnLimit_high_thresh 4000, ConnLimit_low_thresh 3048
+Apr 14 17:18:51.000 [info] crypto_openssl_late_init(): NOT using OpenSSL engine support.
+Apr 14 17:18:51.000 [info] evaluate_evp_for_aes(): This version of OpenSSL has a known-good EVP counter-mode implementation. Using it.
+Apr 14 17:18:51.000 [debug] tor_disable_debugger_attach(): Attempting to disable debugger attachment to Tor for unprivileged users.
+Apr 14 17:18:51.000 [info] tor_lockfile_lock(): Locking "./lib/lock"
+Apr 14 17:18:51.000 [warn] Unrecognized flag 'VM2_Auth' on DirAuthority line
+Apr 14 17:18:51.000 [debug] parse_dir_authority_line(): Trusted 100 dirserver at 10.0.0.2:9031 (5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F)
+Apr 14 17:18:51.000 [debug] file_status(): stat()ing ./lib/state
+Apr 14 17:18:51.000 [debug] subsystems_register_state_formats(): Added state format for mainloop with index 0
+Apr 14 17:18:51.000 [info] or_state_load(): Initialized state
+Apr 14 17:18:51.000 [info] circuit_build_times_parse_state(): Adding 0 timeouts.
+Apr 14 17:18:51.000 [info] circuit_build_times_parse_state(): Loaded 0/0 values from 0 lines in circuit time histogram
+Apr 14 17:18:51.000 [debug] tor_rename(): Renaming ./lib/state.tmp to ./lib/state
+Apr 14 17:18:51.000 [info] or_state_save(): Saved state to "./lib/state"
+Apr 14 17:18:51.000 [info] check_private_dir(): Creating directory ./lib/diff-cache
+Apr 14 17:18:51.000 [debug] parse_addr_policy(): Adding new entry 'reject *:*'
+Apr 14 17:18:51.000 [info] tor_addr_parse_mask_ports(): '*:*' expands into rules which apply to all IPv4 and IPv6 addresses. (Use accept/reject *4:* for IPv4 or accept[6]/reject[6] *6:* for IPv6.)
+Apr 14 17:18:51.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
+Apr 14 17:18:51.000 [debug] scheduler_can_use_kist(): Determined KIST sched_run_interval should be 10. Can use KIST.
+Apr 14 17:18:51.000 [info] scheduler_kist_set_full_mode(): Setting KIST scheduler with kernel support (KIST mode)
+Apr 14 17:18:51.000 [debug] kist_scheduler_run_interval(): KISTSchedRunInterval=0, turning to the consensus.
+Apr 14 17:18:51.000 [info] cmux_ewma_set_options(): Enabled cell_ewma algorithm because of value in CircuitPriorityHalflifeMsec in consensus; scale factor is 0.793701 per 10 seconds
+Apr 14 17:18:51.000 [notice] Parsing GEOIP IPv4 file /usr/share/tor/geoip.
+Apr 14 17:18:51.000 [notice] Parsing GEOIP IPv6 file /usr/share/tor/geoip6.
+Apr 14 17:18:52.000 [info] options_act_relay_stats(): Configured to measure hidden service statistics.
+Apr 14 17:18:52.000 [notice] Configured to measure statistics. Look for the *-stats files that will first be written to the data directory in 24 hours from now.
+Apr 14 17:18:52.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: config change
+Apr 14 17:18:52.000 [info] circpad_machine_client_hide_intro_circuits(): Registered client intro point hiding padding machine (0)
+Apr 14 17:18:52.000 [info] circpad_machine_relay_hide_intro_circuits(): Registered relay intro circuit hiding padding machine (0)
+Apr 14 17:18:52.000 [info] circpad_machine_client_hide_rend_circuits(): Registered client rendezvous circuit hiding padding machine (1)
+Apr 14 17:18:52.000 [info] circpad_machine_relay_hide_rend_circuits(): Registered relay rendezvous circuit hiding padding machine (1)
+Apr 14 17:18:52.000 [info] add_predicted_port(): New port prediction added. Will continue predictive circ building for 2791 more seconds.
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/unparseable-descs
+Apr 14 17:18:52.000 [debug] check_private_dir(): stat()ing ./lib
+Apr 14 17:18:52.000 [debug] check_private_dir(): stat()ing ./lib/keys
+Apr 14 17:18:52.000 [info] init_keys(): Reading/making identity key "./lib/keys/secret_id_key"...
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/secret_id_key
+Apr 14 17:18:52.000 [info] init_key_from_file(): No key found in "./lib/keys/secret_id_key"; generating fresh key.
+Apr 14 17:18:52.000 [info] init_key_from_file(): Generated key seems valid
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/secret_id_key.tmp to ./lib/keys/secret_id_key
+Apr 14 17:18:52.000 [notice] You are running a new relay. Thanks for helping the Tor network! If you wish to know what will happen in the upcoming weeks regarding its usage, have a look at https://blog.torproject.org/blog/lifecycle-of-a-new-relay
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_signing_secret_key": No such file or directory
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_signing_secret_key_encrypted
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_signing_public_key": No such file or directory
+Apr 14 17:18:52.000 [info] No key found in ./lib/keys/ed25519_signing_secret_key.
+Apr 14 17:18:52.000 [notice] It looks like I need to generate and sign a new medium-term signing key, because I don't have one. To do that, I need to load (or create) the permanent master identity key. If the master identity key was not moved or encrypted with a passphrase, this will be done automatically and no further action is required. Otherwise, provide the necessary data using 'tor --keygen' to do it manually.
+Apr 14 17:18:52.000 [debug] check_private_dir(): stat()ing ./lib
+Apr 14 17:18:52.000 [debug] check_private_dir(): stat()ing ./lib/keys
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_master_id_secret_key": No such file or directory
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/ed25519_master_id_secret_key_encrypted
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/keys/ed25519_master_id_public_key": No such file or directory
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_master_id_secret_key.tmp to ./lib/keys/ed25519_master_id_secret_key
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_master_id_public_key.tmp to ./lib/keys/ed25519_master_id_public_key
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_signing_secret_key.tmp to ./lib/keys/ed25519_signing_secret_key
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/ed25519_signing_cert.tmp to ./lib/keys/ed25519_signing_cert
+Apr 14 17:18:52.000 [info] init_keys(): Reading/making onion key "./lib/keys/secret_onion_key"...
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key
+Apr 14 17:18:52.000 [info] init_key_from_file(): No key found in "./lib/keys/secret_onion_key"; generating fresh key.
+Apr 14 17:18:52.000 [info] init_key_from_file(): Generated key seems valid
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/secret_onion_key.tmp to ./lib/keys/secret_onion_key
+Apr 14 17:18:52.000 [info] mark_my_descriptor_dirty(): Decided to publish new relay descriptor: set onion key
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key.old
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor
+Apr 14 17:18:52.000 [info] init_curve25519_keypair_from_file(): No key found in "./lib/keys/secret_onion_key_ntor"; generating fresh key.
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/keys/secret_onion_key_ntor.tmp to ./lib/keys/secret_onion_key_ntor
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/keys/secret_onion_key_ntor.old
+Apr 14 17:18:52.000 [info] router_write_fingerprint(): Dumping fingerprint to "./lib/fingerprint"...
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/fingerprint": No such file or directory
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/fingerprint.tmp to ./lib/fingerprint
+Apr 14 17:18:52.000 [notice] Your Tor server's identity key  fingerprint is 'VM3 34295B81E14DA5DDA665843423E9DB6D1E6CA228'
+Apr 14 17:18:52.000 [info] router_write_fingerprint(): Dumping ed25519 identity to "./lib/fingerprint-ed25519"...
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/fingerprint-ed25519": No such file or directory
+Apr 14 17:18:52.000 [debug] tor_rename(): Renaming ./lib/fingerprint-ed25519.tmp to ./lib/fingerprint-ed25519
+Apr 14 17:18:52.000 [notice] Your Tor server's identity key ed25519 fingerprint is 'VM3 UHFsTqjgyg4b/f0oc4Eqf+TlVjrS78F962FB9MIFc+M'
+Apr 14 17:18:52.000 [notice] Bootstrapped 0% (starting): Starting
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/cached-certs": No such file or directory
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/cached-consensus" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/unverified-consensus" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdesc-consensus" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/unverified-microdesc-consensus" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/cached-microdescs" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [info] read_file_to_str(): Could not open "./lib/cached-microdescs.new": No such file or directory
+Apr 14 17:18:52.000 [info] microdesc_cache_reload(): Reloaded microdescriptor cache. Found 0 descriptors.
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/cached-descriptors" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/cached-descriptors.new
+Apr 14 17:18:52.000 [info] tor_mmap_file(): Could not open "./lib/cached-extrainfo" for mmap(): No such file or directory
+Apr 14 17:18:52.000 [debug] file_status(): stat()ing ./lib/cached-extrainfo.new
+Apr 14 17:18:52.000 [notice] Starting with guard context "default"
+Apr 14 17:18:52.000 [debug] get_guard_selection_by_name(): Creating a guard selection called default
+Apr 14 17:18:52.000 [info] sampled_guards_update_from_consensus(): Not updating the sample guard set; we have no reasonably live consensus.
+Apr 14 17:18:52.000 [info] first_reachable_filtered_entry_guard(): Trying to sample a reachable guard: We know of 0 in the USABLE_FILTERED set.
+Apr 14 17:18:52.000 [info] first_reachable_filtered_entry_guard():   (That isn't enough. Trying to expand the sample.)
+Apr 14 17:18:52.000 [info] entry_guards_expand_sample(): Not expanding the sample guard set; we have no reasonably live consensus.
+Apr 14 17:18:52.000 [info] first_reachable_filtered_entry_guard():   (After filters [b], we have 0 guards to consider.)
+Apr 14 17:18:52.000 [info] I learned some more directory information, but not enough to build a circuit: We have no usable consensus.
+Apr 14 17:18:52.000 [debug] configure_nameservers(): stat()ing /etc/resolv.conf
+Apr 14 17:18:52.000 [debug] configure_nameservers(): Loading /etc/hosts
+Apr 14 17:18:52.000 [info] configure_nameservers(): Parsing resolver configuration in '/etc/resolv.conf'
+Apr 14 17:18:52.000 [info] eventdns: Parsing resolv.conf file /etc/resolv.conf
+Apr 14 17:18:52.000 [info] eventdns: Added nameserver [::1]:53 as 0x55a30328ae20
+Apr 14 17:18:52.000 [info] eventdns: Added nameserver 127.0.0.1:53 as 0x55a30328cce0
+Apr 14 17:18:52.000 [info] eventdns: Setting maximum allowed timeouts to 10
+Apr 14 17:18:52.000 [info] eventdns: Setting maximum inflight requests to 8192
+Apr 14 17:18:52.000 [info] eventdns: Setting timeout to 5
+Apr 14 17:18:52.000 [info] eventdns: Setting retries to 3
+Apr 14 17:18:52.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
+Apr 14 17:18:52.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' ns consensus found; not making diffs
+Apr 14 17:18:52.000 [info] consdiffmgr_rescan_flavor_(): No 'most recent' microdesc consensus found; not making diffs
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event add_entropy
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event heartbeat
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reset_padding_counts
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event second_elapsed
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_listeners
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_expired_networkstatus
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event fetch_networkstatus
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event launch_descriptor_fetches
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_x509_certificate
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_network_participation
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_caches
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event save_state
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event write_stats_file
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event prune_old_routers
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event hs_service
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event record_bridge_stats
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rend_cache_failure_clean
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event clean_consdiffmgr
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event control_per_second_events
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_canonical_channels
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event expire_old_circuits_serverside
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event retry_dns
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_dns_honesty
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event rotate_onion_key
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_descriptor
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_for_reachability_bw
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event reachability_warnings
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_ed_keys
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Launching periodic event check_onion_keys_expiry_time
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event downrate_stability
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event launch_reachability_tests
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event save_stability
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event check_authority_cert
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event dirvote
+Apr 14 17:18:53.000 [debug] periodic_events_rescan_by_roles(): Disabling periodic event write_bridge_ns
+Apr 14 17:18:53.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
+Apr 14 17:18:53.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:18:53.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:18:53.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:18:53.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:18:53.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:18:53.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 13).
+Apr 14 17:18:53.000 [debug] connection_add_impl(): new conn type Directory, socket 13, address 10.0.0.2, n_conns 3.
+Apr 14 17:18:53.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393.z
+Apr 14 17:18:53.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 143, payload size: 0)
+Apr 14 17:18:53.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
+Apr 14 17:18:53.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:18:53.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:18:53.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:18:53.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:18:53.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:18:53.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 14).
+Apr 14 17:18:53.000 [debug] connection_add_impl(): new conn type Directory, socket 14, address 10.0.0.2, n_conns 4.
+Apr 14 17:18:53.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393.z
+Apr 14 17:18:53.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 153, payload size: 0)
+Apr 14 17:18:53.000 [debug] tor_rename(): Renaming ./lib/state.tmp to ./lib/state
+Apr 14 17:18:53.000 [info] or_state_save(): Saved state to "./lib/state"
+Apr 14 17:18:53.000 [debug] prune_old_routers_callback(): Pruning routerlist...
+Apr 14 17:18:53.000 [debug] consdiffmgr_cleanup(): Looking for consdiffmgr entries to remove
+Apr 14 17:18:53.000 [info] channel_check_for_duplicates(): Performed connection pruning. Found 0 connections to 0 relays. Found 0 current canonical connections, in 0 of which we were a non-canonical peer. 0 relays had more than 1 connection, 0 had more than 2, and 0 had more than 4 connections.
+Apr 14 17:18:53.000 [info] router_rebuild_descriptor(): Rebuilding relay descriptor
+Apr 14 17:18:53.000 [debug] get_address_from_config(): Attempting to get address from configuration
+Apr 14 17:18:53.000 [info] get_address_from_config(): Address found in configuration: 10.0.0.3
+Apr 14 17:18:53.000 [debug] get_address_from_config(): Attempting to get address from configuration
+Apr 14 17:18:53.000 [info] get_address_from_config(): No Address option found for family IPv6 in configuration.
+Apr 14 17:18:53.000 [debug] get_address_from_orport(): Attempting to get address from ORPort
+Apr 14 17:18:53.000 [info] get_address_from_orport(): Address found from ORPort: ::
+Apr 14 17:18:53.000 [debug] parse_addr_policy(): Adding new entry 'reject *4:*'
+Apr 14 17:18:53.000 [debug] parse_addr_policy(): Adding new entry 'reject *6:*'
+Apr 14 17:18:53.000 [info] extrainfo_dump_to_string_stats_helper(): Adding stats to extra-info descriptor.
+Apr 14 17:18:53.000 [debug] file_status(): stat()ing ./lib/stats/dirreq-stats
+Apr 14 17:18:53.000 [debug] file_status(): stat()ing ./lib/stats/hidserv-stats
+Apr 14 17:18:53.000 [debug] router_dump_router_to_string(): My or-address line is <or-address [::]:5000
+>
+Apr 14 17:18:53.000 [debug] conn_read_callback(): socket 13 wants to read.
+Apr 14 17:18:53.000 [info] connection_close_immediate(): fd 13, type Directory, state connecting, 143 bytes on outbuf.
+Apr 14 17:18:53.000 [debug] conn_close_if_marked(): Cleaning up connection (fd -1).
+Apr 14 17:18:53.000 [debug] connection_remove(): removing socket -1 (type Directory), n_conns now 4
+Apr 14 17:18:53.000 [debug] conn_read_callback(): socket 14 wants to read.
+Apr 14 17:18:53.000 [info] connection_close_immediate(): fd 14, type Directory, state connecting, 153 bytes on outbuf.
+Apr 14 17:18:53.000 [debug] conn_close_if_marked(): Cleaning up connection (fd -1).
+Apr 14 17:18:53.000 [debug] connection_remove(): removing socket -1 (type Directory), n_conns now 3
+Apr 14 17:18:54.000 [info] update_consensus_networkstatus_downloads(): Launching ns standard networkstatus consensus download.
+Apr 14 17:18:54.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:18:54.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:18:54.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:18:54.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:18:54.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:18:54.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 13).
+Apr 14 17:18:54.000 [debug] connection_add_impl(): new conn type Directory, socket 13, address 10.0.0.2, n_conns 3.
+Apr 14 17:18:54.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus/E45393.z
+Apr 14 17:18:54.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 143, payload size: 0)
+Apr 14 17:18:54.000 [info] update_consensus_networkstatus_downloads(): Launching microdesc standard networkstatus consensus download.
+Apr 14 17:18:54.000 [info] router_pick_directory_server(): No reachable router entries for dirservers. Trying them all again.
+Apr 14 17:18:54.000 [info] directory_pick_generic_dirserver(): No router found for consensus network-status fetch; falling back to dirserver list.
+Apr 14 17:18:54.000 [debug] directory_initiate_request(): anonymized 0, use_begindir 0.
+Apr 14 17:18:54.000 [debug] directory_initiate_request(): Initiating consensus network-status fetch
+Apr 14 17:18:54.000 [debug] connection_connect(): Connecting to [scrubbed]:9031.
+Apr 14 17:18:54.000 [debug] connection_connect_sockaddr(): Connection to socket in progress (sock 14).
+Apr 14 17:18:54.000 [debug] connection_add_impl(): new conn type Directory, socket 14, address 10.0.0.2, n_conns 4.
+Apr 14 17:18:54.000 [info] directory_send_command(): Downloading consensus from 10.0.0.2:9031 using /tor/status-vote/current/consensus-microdesc/E45393.z
+Apr 14 17:18:54.000 [debug] directory_send_command(): Sent request to directory server 10.0.0.2:9031 (purpose: 14, request size: 153, payload size: 0)
+Apr 14 17:18:54.000 [debug] conn_read_callback(): socket 13 wants to read.
+Apr 14 17:18:54.000 [info] connection_close_immediate(): fd 13, type Directory, state connecting, 143 bytes on outbuf.
+Apr 14 17:18:54.000 [debug] conn_close_if_marked(): Cleaning up connection (fd -1).
+Apr 14 17:18:54.000 [debug] connection_remove(): removing socket -1 (type Directory), n_conns now 4
+Apr 14 17:18:54.000 [debug] conn_read_callback(): socket 14 wants to read.
+Apr 14 17:18:54.000 [info] connection_close_immediate(): fd 14, type Directory, state connecting, 153 bytes on outbuf.
+Apr 14 17:18:54.000 [debug] conn_close_if_marked(): Cleaning up connection (fd -1).
+Apr 14 17:18:54.000 [debug] connection_remove(): removing socket -1 (type Directory), n_conns now 3
