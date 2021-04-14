@@ -1,8 +1,8 @@
-# Tor shared random state file last generated on 2021-04-14 17:06:10 local time
+# Tor shared random state file last generated on 2021-04-14 17:11:05 local time
 # Other times below are in UTC
 # Please *do not* edit this file.
 
 TorVersion 0.4.5.7
-ValidAfter 2021-04-14 17:07:30
+ValidAfter 2021-04-14 17:12:30
 ValidUntil 2021-04-14 18:00:00
 Version 1
