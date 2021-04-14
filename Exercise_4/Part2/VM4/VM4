@@ -1,18 +1,16 @@
-ShutdownWaitLength 2
 ExitRelay 1
-IPv6Exit 1
 ExitPolicy accept *:*
-CookieAuthentication 1
-ContactInfo pastly@torproject.org
-LogTimeGranularity 1
-SafeLogging 0
 
-DirServer VM2_Auth orport=9001 v3ident=E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2:9031 5B8E954ACFA8578FFB4D6EE87E6B38A6C721764F
+DirServer VM2_Auth orport=9001 v3ident=E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2:9031 9AD686225BDF05B0695531BAD0E628DD9530071A
+
+DirServer VM3_Auth orport=9003 v3ident=7E96051880347AC992A29003414D523F2EF72D84 10.0.0.3:9033 34295B81E14DA5DDA665843423E9DB6D1E6CA228
 TestingTorNetwork 1
 
-DataDirectory VM4
+DataDirectory ./lib
 Address 10.0.0.4
 SocksPort 0
 ControlPort 0
-ORPort 443
+ORPort 5000
 Nickname VM4
+
+Log debug file tor_debug.log
