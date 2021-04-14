@@ -1,0 +1,31 @@
+network-status-version 3 microdesc
+vote-status consensus
+consensus-method 30
+valid-after 2021-04-14 18:30:00
+fresh-until 2021-04-14 18:35:00
+valid-until 2021-04-14 18:45:00
+voting-delay 20 20
+client-versions 
+server-versions 
+known-flags Authority Exit Fast Guard HSDir NoEdConsensus Running Stable StaleDesc V2Dir Valid
+recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 Microdesc=2 Relay=2
+recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
+required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+dir-source VM3 7E96051880347AC992A29003414D523F2EF72D84 10.0.0.3 10.0.0.3 9033 5000
+contact abcd@xyz.com
+vote-digest 118568EC2F67A1CE74E5C0190886585B718B645C
+dir-source VM2 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2 10.0.0.2 9031 5000
+contact abc@xyz.com
+vote-digest 5228E63E99573DC3E58BAE59AC8E17DAA89CD6E2
+directory-footer
+bandwidth-weights Wbd=3333 Wbe=0 Wbg=0 Wbm=10000 Wdb=10000 Web=10000 Wed=3333 Wee=10000 Weg=3333 Wem=10000 Wgb=10000 Wgd=3333 Wgg=10000 Wgm=10000 Wmb=10000 Wmd=3333 Wme=0 Wmg=0 Wmm=10000
+directory-signature sha256 7E96051880347AC992A29003414D523F2EF72D84 5ED73971B373F5D1E15396B001E4F9C396A0A565
+-----BEGIN SIGNATURE-----
+t8KpIlTtnSsfsDyk6l6ImF/ww3t8eFB5sthUFEG8cjP6qffD2uTUgmNuCN2eEv/G
+nZZ1QoTVyXMN5acO70JQGHQRdgyw5NwJgCYcWAD7wz0sL4Jb1BO4GqJShWFzXPFH
+trTaqGO23xJQ9tQo7L+wpynDqu+d97yH8XSzz8HPSR/9ukfK8NzCBh1d1F/LgOzY
+f74AyP1MpEDre4goRqejLUxubvO2saQexaQT5E/wRIGLo2MXGEXfXG2YdU4srnme
+WowRT8wpotEsFVBn+utKEoA20hCJVogB/aQz+4rHXAWSXcw3UKJLfgMgEFVacIGa
+Up0z6hALM9w52uRSKBZI2A==
+-----END SIGNATURE-----
