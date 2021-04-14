@@ -1,0 +1,59 @@
+network-status-version 3
+vote-status consensus
+consensus-method 30
+valid-after 2021-04-14 20:20:00
+fresh-until 2021-04-14 20:25:00
+valid-until 2021-04-14 20:35:00
+voting-delay 20 20
+client-versions 
+server-versions 
+known-flags Authority Exit Fast Guard HSDir NoEdConsensus Running Stable StaleDesc V2Dir Valid
+recommended-client-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 Microdesc=2 Relay=2
+recommended-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+required-client-protocols Cons=2 Desc=2 Link=4 Microdesc=2 Relay=2
+required-relay-protocols Cons=2 Desc=2 DirCache=2 HSDir=2 HSIntro=4 HSRend=2 Link=4-5 LinkAuth=3 Microdesc=2 Relay=2
+params KISTSchedRunInterval=10
+dir-source VM3 7E96051880347AC992A29003414D523F2EF72D84 10.0.0.3 10.0.0.3 9033 9003
+contact abcd@xyz.com
+vote-digest 62C62EE8DC0F99202858F317258ABAAED1C5B314
+dir-source VM4 D902D22B3D676B70A10FC2B9C3A1E082A27E3D60 10.0.0.4 10.0.0.4 9035 9005
+contact abcde@xyz.com
+vote-digest B74F7B7223C60F79A78F8FCA78951C5FFF77AA57
+dir-source VM2 E45393E0B407D3CC278E44AF08896FA2CF4A14D3 10.0.0.2 10.0.0.2 9031 9001
+contact abc@xyz.com
+vote-digest 8AFEF85C4171C8692E633E83063B03B7C02E4E1F
+r VM3 gtr/bGhmn3ubJiqlQFe/7DXywrc 2a32cZfP/l2n61+qBN6VqvwzaqU 2021-04-14 20:18:36 10.0.0.3 9003 9033
+s Fast Guard HSDir Running Stable V2Dir Valid
+v Tor 0.4.5.7
+pr Cons=1-2 Desc=1-2 DirCache=2 FlowCtrl=1 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Padding=2 Relay=1-3
+w Bandwidth=0 Unmeasured=1
+p reject 1-65535
+directory-footer
+bandwidth-weights Wbd=3333 Wbe=0 Wbg=0 Wbm=10000 Wdb=10000 Web=10000 Wed=3333 Wee=10000 Weg=3333 Wem=10000 Wgb=10000 Wgd=3333 Wgg=10000 Wgm=10000 Wmb=10000 Wmd=3333 Wme=0 Wmg=0 Wmm=10000
+directory-signature 7E96051880347AC992A29003414D523F2EF72D84 5ED73971B373F5D1E15396B001E4F9C396A0A565
+-----BEGIN SIGNATURE-----
+CCOqP9tCst++xugbSr65g9JaoqlBhDoWDmFesz6cdV9tBOJfpMQCLVVDZvmK6gaZ
+seck7cPaJmI4NJzcmsS4T2sitAsbdUAoNiHzagG96/7xwRVy21CSOtWV5wQMHRE4
+tu7P82KPMvAEZfF0/z8udSsWyzyVlY6CMPKz4WXgM/F0IdNSr7VF7sAH81yK8GU2
+ZSgLBKE/wa08xCMTsjmHJRIoUmWemHb/OClsDRYBY8s82L7KGfCKoNGf0AbC53oa
+A/FDK5asDwfFGS+YICdmjL+JjnPId+c0dQy7nfDeaWzcY2eu+NXZ65a1EWvlDEW9
+GEhS5tRPKvtOiyVs0yva5g==
+-----END SIGNATURE-----
+directory-signature D902D22B3D676B70A10FC2B9C3A1E082A27E3D60 17F2C56544467103095AB92ADAF4331CA996CC10
+-----BEGIN SIGNATURE-----
+JI/Uqg2bymuCYvrySW4MLu9KlAT/1kVlvMygwo2XVX3bzX3S/FblV0pvUngPL6Po
+3lr8ehbi9674bQRV4bQdsn1uOzlDcXe6n6BAI8r5k3/cW3NASGUp/eVpxSefjej/
+fxVKGil4he+UIobexwOqPju6flRzPJNq2Jvf2+uknaAiqfh1ptSt3wq5kXgxCJF4
+XYh41tCLP/qP4pxpR3Ux86ErcVjtk9M+dh1h/ClWsHb09DQXU1heL4LsXKq7A5SR
+7tR+NwNor//f63lwEyMfeRgejTdkgkSBXSWD8pz8MrOrAWMYO4PuPgPW03jLvjvf
+o3ITIRcc9DjSoYpWpQwv1w==
+-----END SIGNATURE-----
+directory-signature E45393E0B407D3CC278E44AF08896FA2CF4A14D3 7C4D46C2DE589582B77ECDE194F62BCB2A4BA5BB
+-----BEGIN SIGNATURE-----
+lINm4L35/vV3T3CvpGbcYuwCk8EH6uKyPwQwy38+q1WV2s+c/MsiyT5MOBGLF8qx
+xJ3UQPTiN2YYU3cO/iNIpqdTzaiq27Exp5LyqQslmUl9jR7l930to3WVIklFuvnx
+eUnWTQSS8mFqGLvr5+fMVKsIo1+6lQnIgU1+he6FlIzkrdRvYm25EfnhiVQLEenx
+XPMRWm7EisnXacTSHWAH4W7ns7AFZm6xlZdlt7HMoI9z6OQb1X/+wFMaoPidJszw
+YLGquwrxWkYBCJxgIv+yEtN+s1RyUKpCW/s8WdUjmLYp1NK1R6pOOzNch+Gz/q9e
+JQP+omm3MZM2DaD/BCh0bQ==
+-----END SIGNATURE-----

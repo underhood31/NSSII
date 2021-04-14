@@ -1,11 +1,11 @@
-# Tor state file last generated on 2021-04-14 19:46:19 local time
+# Tor state file last generated on 2021-04-14 20:18:33 local time
 # Other times below are in UTC
 # You *do not* need to edit this file.
 
 BWHistoryDirReadEnds 2021-04-15 17:57:41
 BWHistoryDirReadInterval 86400
 BWHistoryDirReadMaxima 0
-BWHistoryDirReadValues 0
+BWHistoryDirReadValues 19456
 BWHistoryDirWriteEnds 2021-04-15 17:57:41
 BWHistoryDirWriteInterval 86400
 BWHistoryDirWriteMaxima 0
@@ -20,13 +20,13 @@ BWHistoryIPv6WriteMaxima 0
 BWHistoryIPv6WriteValues 0
 BWHistoryReadEnds 2021-04-15 17:57:41
 BWHistoryReadInterval 86400
-BWHistoryReadMaxima 0
-BWHistoryReadValues 0
+BWHistoryReadMaxima 1024
+BWHistoryReadValues 28672
 BWHistoryWriteEnds 2021-04-15 17:57:41
 BWHistoryWriteInterval 86400
 BWHistoryWriteMaxima 0
-BWHistoryWriteValues 0
+BWHistoryWriteValues 6144
 Dormant 0
 LastRotatedOnionKey 2021-04-14 17:57:41
-LastWritten 2021-04-14 19:46:19
+LastWritten 2021-04-14 20:18:33
 TorVersion Tor 0.4.5.7
