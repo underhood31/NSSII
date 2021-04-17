@@ -1,0 +1,17 @@
+# Tor state file last generated on 2021-04-15 00:08:31 local time
+# Other times below are in UTC
+# You *do not* need to edit this file.
+
+CircuitBuildTimeBin 25 19
+CircuitBuildTimeBin 75 43
+CircuitBuildTimeBin 225 1
+CircuitBuildTimeBin 275 1
+CircuitBuildTimeBin 725 2
+CircuitBuildTimeBin 1225 1
+Dormant 0
+Guard in=default rsa_id=9AD686225BDF05B0695531BAD0E628DD9530071A nickname=VM2 sampled_on=2021-04-05T17:06:53 sampled_idx=0 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-04-03T05:44:06 confirmed_idx=1 pb_use_attempts=2.000000 pb_use_successes=2.000000 pb_circ_attempts=59.000000 pb_circ_successes=59.000000 pb_successful_circuits_closed=59.000000
+Guard in=default rsa_id=FBF8E18DA23876F5E672FB164C5D65F151159EB9 nickname=VM4 sampled_on=2021-04-13T19:59:36 sampled_idx=1 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-04-09T01:13:23 confirmed_idx=2 pb_circ_attempts=8.000000 pb_circ_successes=8.000000 pb_successful_circuits_closed=8.000000
+Guard in=default rsa_id=82DAFF6C68669F7B9B262AA54057BFEC35F2C2B7 nickname=VM3 sampled_on=2021-04-07T14:30:25 sampled_idx=2 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-04-11T10:43:15 confirmed_idx=0
+LastWritten 2021-04-15 00:08:31
+TorVersion Tor 0.4.5.7
+TotalBuildTimes 67
