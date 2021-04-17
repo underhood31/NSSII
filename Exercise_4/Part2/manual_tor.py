@@ -2,7 +2,9 @@
 # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
 from stem.control import Controller
 import stem
+import stem.process
 import getpass
+from stem.util import term
 import subprocess
 from os import system
 import os
@@ -10,9 +12,13 @@ FILEPATH = "/tmp/relay_fingerprints.txt"
 PROG = "gedit"
 #https://metrics.torproject.org/rs.html#toprelays
 EXIT_FINGERPRINT = '18EAE30A4585BEB0D63D36BCFE3F9CA786CB55C7'
-
+def print_bootstrap_lines(line):
+  if "Bootstrapped " in line:
+    print(term.format(line, term.Color.BLUE))
 
 if __name__ == '__main__':
+	tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines, torrc_path="./VM1/VM1")
+
 	try: 
 		with Controller.from_port() as controller:
 			auth_err=0
@@ -33,7 +39,7 @@ if __name__ == '__main__':
 
 				# print("My Tor relay has read %s Mbytes and written %s." % (str(bytes_read/((1024**2))), str(bytes_written/(1024**2))))
 
-				length=int(input("Enter relay size(exluding the exit point: ")) 
+				length=int(input("Enter relay size:")) 
 				stream=[]
 				for _r in range(length):
 					_s=input("relay "+str(_r+1)+":")
@@ -45,10 +51,12 @@ if __name__ == '__main__':
 
 				input("press enter to exit...")
 				
-				ch=input("Do you want to kill tor? (y/n)")
-				if(ch=='y' or ch=='Y'):
-					print("::Killing tor")
-					args= ("systemctl" , "stop", "tor")
-					popen = subprocess.Popen(args, stdout=subprocess.PIPE)
+				# ch=input("Do you want to kill tor? (y/n)")
+				# if(ch=='y' or ch=='Y'):
+				# 	print("::Killing tor")
+				# 	args= ("systemctl" , "stop", "tor")
+				# 	popen = subprocess.Popen(args, stdout=subprocess.PIPE)
 	except stem.SocketError as er:
 		print("Error: ", er, "\nTry starting tor service.")
+	finally:
+		tor_p.kill()

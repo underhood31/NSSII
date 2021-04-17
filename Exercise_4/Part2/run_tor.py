@@ -2,6 +2,7 @@
 # https://stackoverflow.com/questions/2473655/how-to-make-a-call-to-an-executable-from-python-script
 from stem.control import Controller
 import stem
+import stem.process
 import getpass
 import subprocess
 from os import system
