@@ -23,7 +23,6 @@ def print_bootstrap_lines(line):
 
 
 if __name__ == '__main__':
-	tor_p = stem.process.launch_tor(init_msg_handler = print_bootstrap_lines, torrc_path="/etc/tor/torrc")
 	try: 
 		with Controller.from_port() as controller:
 			auth_err=0
