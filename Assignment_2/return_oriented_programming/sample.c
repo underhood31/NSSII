@@ -1,11 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+void called(){
+	printf("hello\n");
+} 
 
 int main(){
+	called();
         char name[64],*cptr;
         unsigned long *ptr;
 	printf("buffer address: %p\n", name);  //print address of buffer
-        puts("Enter text for name:");
+	printf("func address: %p\n",called);
+	printf("execve address: %p\n",execve);  
+	printf("%d\n",sizeof(unsigned long));      
+	puts("Enter text for name:");
         gets(name);
         printf("content of buffer: %s\n", name);
         
@@ -14,7 +23,7 @@ int main(){
         
         cptr = name+64+8;
         ptr = (unsigned long *)cptr;
-        *ptr = 0x00007ffff7b7a9af;
+        *ptr = 0x0000ffffd098;
         *(ptr+1) = (unsigned long *)name;
         *(ptr+2) = 0x00007ffff7b79d76;
         *(ptr+3) = (unsigned long *)0;
