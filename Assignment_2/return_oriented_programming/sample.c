@@ -2,8 +2,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
-void called(){
-	printf("hello\n");
+void called(unsigned long a, unsigned long b, unsigned long c){
+	printf("%ld %ld %ld\n",a,b,c);
 } 
 
 int main(){
@@ -13,28 +13,24 @@ int main(){
         puts("Enter text for name:");
         gets(name);
         printf("content of buffer: %s\n", name);
-        // printf("content of buffer: %s\n", name);
+        printf("execve of execve: %p\n", execve);
         
         memset(name,0,64);
         strcpy(name,"/bin/sh"); 
         
         cptr = name+80+8;
         ptr = (unsigned long *)cptr;
-        *ptr = called;
-        *(ptr+1) = called;
-        *(ptr+2) = called;
-        *(ptr+3) = called;
-        // *(ptr+4) = called;
-        // *(ptr+5) = called;
-        // *ptr = 0x00007ffff7b7a9af;
-        // *(ptr+1) = (unsigned long *)name;
-        // *(ptr+2) = 0x00007ffff7b79d76;
-        // *(ptr+3) = (unsigned long *)0;
-        // *(ptr+4) = 0x00007ffff7a15b8e;
-        // *(ptr+5) = (unsigned long *)0;
-        // *(ptr+6) = 0x00007ffff7ad5ec0;
-       
-  
+     
+	
+        
+        *(ptr+5) = (unsigned long *) name; //first arg
+	*(ptr+6) = (unsigned long*) NULL;        //second //arg
+	*(ptr+7)=(unsigned long *)NULL;	//third arg
+	//*(ptr+3) = (unsigned long *)execve;
+	//OR if randomization is disabled
+	*(ptr+3) = (unsigned long *)0xf7e9e2b0;
+	
+
         return 0;
 
 }
