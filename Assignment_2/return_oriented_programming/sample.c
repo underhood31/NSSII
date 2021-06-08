@@ -28,7 +28,7 @@ int main(){
 	*(ptr+7)=(unsigned long *)NULL;	//third arg
 	// *(ptr+3) = (unsigned long *)execve;
 	//OR if randomization is disabled
-	*(ptr+3) = (unsigned long *)0xf7e9e2b0;
+	*(ptr+3) = (unsigned long *)execve;
 	
 
         return 0;
